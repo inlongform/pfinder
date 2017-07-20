@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {{>pre-head}}
+</head>
+
+<body id="ibm-com" class="preview">
+    <div id="ibm-top" class="ibm-landing-page">
+        <!-- MASTHEAD_BEGIN -->
+        {{>masthead}}
+        <!-- MASTHEAD_END -->
+        <div id="ibm-content-wrapper">
+            <main role="main" aria-labelledby="ibm-pagetitle-h1">
+                <div id="ibm-pcon">
+                    <div id="ibm-content" >
+                        <div id="ibm-content-body ibm-padding-bottom-0">
+                            <div id="ibm-content-main">
+                                <div class="ibm-band learn-more-top-bar">
+                                    <div class="ibm-columns">
+                                        <div class="ibm-col-1-1">
+                                            <p>
+                                                <!-- headerTxt -->
+                                            </p>
+                                            <a href="#" class="ibm-btn-pri">
+                                            <!-- <a href="#" onclick="IBMCore.common.widget.overlay.show('mrs-ungated-overlay');return false;" class="ibm-btn-pri">
+                                                headerBtnTxt -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibm-band page-heading">
+                                    <div class="ibm-columns">
+                                        <div class="ibm-col-1-1 title">
+                                            <h2 class="ibm-h2"><!-- headline --></h2>
+                                        </div>
+                                        <div class="ibm-col-1-1 content">
+                                            <p>
+                                                <!-- description -->
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ibm-band page-content ibm-padding-bottom-60">
+                                    <div class="ibm-columns">
+                                        <div class="ibm-col-1-1 ibm-no-mobile">
+                                            <!--content goes here-->
+
+                                        </div>
+                                        <div class="ibm-col-1-1 ibm-mobile ibm-padding-bottom-30">
+                                            <img src="assets/img/MRS_Asset_icon.png" />
+                                        </div>
+                                        <div class="ibm-col-1-1">
+                                            <p>
+                                                <a href="#" class="ibm-btn-pri" target="_blank">Download</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Footer -->
+        <!-- Place this tag where you want the share button to render. -->
+        <footer role="contentinfo" aria-label="IBM">
+            <div id="ibm-footer">
+                <ul>...{footer links here}...</ul>
+            </div>
+        </footer>
+    </div>
+    {{> scripts}}
+    <script>
+     new IBM.mrs.Preview();
+    </script>
+</body>
+
+</html>

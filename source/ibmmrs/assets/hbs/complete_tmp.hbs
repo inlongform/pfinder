@@ -1,0 +1,145 @@
+<div class="page complete_tmp ibm-padding-top-30" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-4">
+                <div class="gate">
+                    <div class="section_icon" style="{{#if section_yposition}}background-position: 0 {{section_yposition}};{{else}}visibility: hidden;{{/if}}"></div>
+                    <h2 class="ibm-h2">
+                        {{#if isUngated}}
+                                {{copy_ungated}}
+                            {{else}}
+                                {{copy}}
+                        {{/if}}
+
+                    </h2> 
+                    {{#if tooltip_txt}}
+                        <a href="#" onClick="return false;" class="tooltip" data-widget="tooltip" data-contentid="test-tt-1">{{tooltip_title}}</a>
+                        <div id="test-tt-1" class="ibm-tooltip-content">
+                            {{{tooltip_txt}}} 
+
+                        </div>
+                    {{/if}}
+                    {{#if uInfo}}
+                        <table cellpadding="0" cellspacing="0">
+                            {{#each uInfo}} 
+                                {{#if selected}}
+                                    <tr>
+                                        <td>{{text}}</td>
+                                        <td>{{selected}}</td>
+                                    </tr>
+                                {{/if}} 
+                            {{/each}}
+                        </table>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+        <div class="ibm-columns">
+            {{#if form_params}}
+            <div class="ibm-col-6-4 ibm-padding-bottom-60">
+                <h4 class="ibm-h4">{{{form_selection.required}}}</h4>
+            </div>
+            <div class="ibm-col-6-4 ibm-left">
+                <div class="half-width">
+                    <p>{{required_title}}</p>
+                    <ul>
+                        {{#each form_params.items}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="half-width">
+                    {{#if showCheckboxes}}
+                        <p>{{optional_title}}</p>
+                        <p class="ibm-padding-bottom-30 ibm-fontsize-body">{{{optional_txt}}}</p>
+                        <form id="optional_fields" class="ibm-form-elem-grp">
+                            {{#each checkBoxes.items}}
+                                <div class="ibm-col-6-2">
+                                    {{#each this}}
+                                        <span class="cBox">
+                                            <input id="{{name}}" name="optGrp" type="checkbox" value="{{name}}" data-type="{{type}}" data-required="{{required}}" data-lbl="{{lbl}}"/> <label for="{{name}}">{{lbl}}</label><br/>
+                                        </span> 
+                                    {{/each}}
+                                </div>
+                            {{/each}}
+                        </form>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
+            {{#ifCond is_preprod2 is_complete}}
+              
+                <div class="ibm-col-6-5">
+                    <div class="pre-prod-wrap">                                
+                        <p class="ibm-padding-bottom-30">{{success_copy}}</p>
+                        <p>{{{body_copy}}}</p>
+                    </div>
+                </div>
+
+                
+                     
+            {{/ifCond}}
+
+        </div>
+    </div>
+    {{#ifCond is_preprod2 is_complete}}
+        <div class="ibm-band">
+            <div class="ibm-columns ">
+                <div class="ibm-col-6-5 ibm-padding-top-30 ibm-padding-bottom-30">
+                    <div class="preview-link">
+                        <div class="inner">
+                            {{#if is_preprod2}}
+                                <p><a href="{{previewUrl}}" target="_blank">{{previewUrl}}</a></p>
+                            {{else}}
+                                <p><a href="{{liveUrl}}" target="_blank">{{liveUrl}}</a></p>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{#if ready_copy}}<h2 class="ibm-h2 ibm-padding-top-60">{{ready_copy}}</h2>{{/if}}
+    
+                   
+                </div>
+                {{#if is_complete}}
+                    <div id="redirect">
+                        <div class="ibm-col-6-5 ibm-padding-top-30 ibm-padding-bottom-30">
+                            <form id="redirect-box" class="ibm-form-elem-grp">                                                  
+                                <input id="redirect-field" name="redirect-grp" type="checkbox" value="yes" /> <label for="redirect">Redirect an existing CCT form to this new Pathfinder URL.</label>
+                                
+                            </form>
+                        </div>
+                        <div class="ibm-col-6-5 redirect-controls">
+                            <form class="ibm-column-form">
+
+                                <h2 class="ibm-h2">{{cct_copy}}</h2>
+                                <p><input type="text" value="" size="40" maxlength="255" id="redirect-link" name="redirect-link" placeholder="http://"><input type="button" value="Submit" class="ibm-btn-pri submit"></p>
+                                <span class="ibm-item-note success"></span>
+                                <span class="ibm-item-note error"></span>
+
+                            </form>
+                        </div>
+                    </div>
+                 {{/if}}
+            </div>
+        </div>
+    {{/ifCond}}
+    <div class="ibm-band bottom-btn-bar">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                <p>
+                    {{#if previous_btn_txt}}
+                        <a href="#" class="ibm-btn-sec previous">{{{previous_btn_txt}}}</a> 
+                    {{else}}
+                        <a href="#" class="ibm-btn-sec previous" style="visibility:hidden">&nbsp;</a> 
+                    {{/if}}
+                </p>
+            </div>
+            <div class="ibm-col-6-3">
+                {{#each buttons}}
+                    <p>
+                        <input type="button" value="{{btn_txt}}" class="ibm-btn-pri">
+                    </p>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

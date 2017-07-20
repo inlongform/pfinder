@@ -1,0 +1,17 @@
+    <div class="ibm-common-overlay ibm-overlay-alt" data-widget="overlay" id="{{name}}">
+        <div class="ibm-column-form">
+            <h4 class="ibm-h4">{{copy}}</h4>
+            <div class="ibm-rule ibm-alternate ibm-padding-bottom-30"><hr></div>
+            <div class="image-links">
+                <!--<a href="#"><img src="http://placehold.it/110x70"/></a>-->
+                {{#each alt_images}}
+                    <a href="{{this}}"><span class="check"></span><img src="{{this}}"/></a>
+                {{/each}}
+            </div>
+            
+
+            <p>
+                <input type="button" value="{{button_lbl}}" class="ibm-btn-pri">
+            </p>
+        </div>
+    </div>

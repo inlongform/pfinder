@@ -1,0 +1,23 @@
+<div class="resources_tmp" id="{{name}}">
+    <div class="ibm-band stripes">
+        <div class="ibm-background-blue-20"></div>
+        <div class="ibm-background-blue-40"></div>
+        <div class="ibm-background-blue-60"></div>
+    </div>
+    <div class="ibm-band ibm-padding-bottom-60">
+        <div class="ibm-columns" id="test1">
+            <div class="ibm-col-6-2">
+                <ul class="ibm-plain-list">
+                    {{#each items}}
+                        <li><a href="#" class="ibm-h4 button_scroll" data-id="{{@index}}">{{label}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="ibm-col-6-4">
+                {{#each items}}
+                    {{{content}}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

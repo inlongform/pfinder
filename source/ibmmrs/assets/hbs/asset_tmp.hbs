@@ -1,0 +1,16 @@
+{{#if isImg}}
+	<img src="{{assetUrl}}" class="asset ibm-padding-bottom-30"/>
+	{{else if isPdf}}
+	<iframe src="{{assetUrl}}" class="ibm-padding-bottom-30"></iframe>
+	{{else if isYoutube}}
+	<div class="vid" data-widget="videoplayer" data-videodisplay="inline" data-titledisplaytype="overlay" data-videoid="{{vidId}}" data-videotype="youtube" href="https://www.youtube.com/watch?v={{vidId}}">Default content here.</div> 
+	{{else if isVimeo}}
+	<iframe src="https://player.vimeo.com/video/{{vidId}}?color=ffffff&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+{{/if}}
+
+
+
+<!-- 153855962
+ktPbvMqY_rQ
+youtube v18: <div class="vid" data-widget="videoplayer" data-videodisplay="inline" data-titledisplaytype="overlay" data-videoid="{{video_id}}" data-videotype="youtube" href="https://www.youtube.com/watch?v=0uje575Dewc&index=1&list=WL">Default content here.</div> 
+vimeo: <iframe src="https://player.vimeo.com/video/153855962?color=ffffff&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->

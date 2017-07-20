@@ -1,0 +1,54 @@
+{{#if isUngated}}
+<div class="ibm-col-6-2">
+    <h3 class="ibm-h3">Business Contact Information</h3></div>
+{{#each questions}}
+<div class="ibm-col-6-2">
+    {{#if isSelect}}
+    <p>
+        <label for="{{name}}">{{lbl}}:{{#if required}}<span class="ibm-required">*</span>{{/if}}</label>
+    </p>
+    <p>
+        <select id="{{name}}" class="{{name}}" data-width="100%">
+            <option>Please Select</option>
+        </select>
+    </p>
+    {{else}}
+    <p>
+        <label for="{{name}}">{{lbl}}:{{#if required}}<span class="ibm-required">*</span>{{/if}}</label>
+    </p>
+    <p><span><input id="{{name}}" name="{{name}}" size="40" type="text" value=""></span></p>
+    {{/if}}
+</div>
+{{/each}}
+<div class="ibm-col-6-2">
+    <form>
+        <div class="ibm-form-elem-grp ibm-padding-bottom-30 ibm-padding-top-30">
+            <div id="privacyid" class="ibm-notice-choice-container">
+                <input type="checkbox" onclick="onChangeNCOptionsFunction();" checked="checked" name="NC_CHECK_AllMedia" value="0" id="NC_CHECK_AllMedia">
+                <label>Please keep me informed of products, services and offerings from IBM companies worldwide.</label>
+            </div>
+            <p>I accept IBM’s <a href="http://www.ibm.com/privacy/us/en" target="_blank">Privacy statement</a>.</p>
+        </div>
+    </form>
+    <p>
+        <button type="submit" class="ibm-btn-pri submit_btn" value="Submit" form="registerform" id="btn_submitform">Submit</button>
+    </p>
+</div>
+{{else}} {{#each questions}}
+<div class="ibm-row-form">
+    {{#each this}}
+    <div class="halfsize">
+        <p>
+            {{#if isSelect}}
+            <label for="{{name}}">{{lbl}}:{{#if required}}<span class="ibm-required">*</span>{{/if}}</label>
+            <select id="{{name}}{{@index}}" class="{{name}}" data-width="100%">
+                <option>Please Select</option>
+            </select>
+            {{else}}
+            <label for="{{name}}">{{lbl}}:{{#if required}}<span class="ibm-required">*</span>{{/if}}</label>
+            <span><input id="{{name}}" name="{{name}}" size="40" type="text" value=""></span> {{/if}}
+        </p>
+    </div>
+    {{/each}}
+</div>
+{{/each}} {{/if}}

@@ -1,0 +1,129 @@
+<div class="page fields_tmp" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <h2 class="ibm-h2 {{#if isUngated}}ungated{{/if}}">
+
+                    {{#if isUngated}}
+                        {{copy_ungated}}
+                    {{else}}
+                        {{copy}}
+                    {{/if}}
+                </h2>
+            </div>
+            <div class="ibm-col-6-3 ibm-padding-top-60">
+                <div class="ibm-column-form">
+                    {{#with fields}}
+                    <div class="ibm-padding-bottom-30">
+                        <p><span>{{nickname.copy}}</span>
+                            <a href="#" class="icon-info tooltip" data-widget="tooltip" data-contentid="tt-{{@index}}"></a>
+                            <div id="tt-{{@index}}" class="ibm-tooltip-content">
+                                <h5 class="ibm-h5 ibm-bold">{{../tooltip_title}}</h5>
+                                <p>{{{../tooltip_txt}}}</p>
+                            </div>
+                        </p>
+                        <p>
+                            <input type="text" value="" size="40" maxlength="255" id="{{nickname.field_name}}" name="{{nickname.field_name}}" placeholder="{{nickname.placeholder}}">
+                            <span class="ibm-item-note ibm-confirm-link"></span>
+                            <span class="ibm-item-note ibm-alert-link"></span>
+                        </p>
+                    </div>
+                    <div class="ibm-padding-bottom-30">
+                        <p>{{offerAssetCode.copy}}</p>
+                        <p>
+                            <input type="text" value="" size="40" maxlength="255" id="{{offerAssetCode.field_name}}" name="{{offerAssetCode.field_name}}" placeholder="{{offerAssetCode.placeholder}}" {{#if ../isEdit}} disabled="true" {{/if}}>
+                            <span class="ibm-item-note ibm-confirm-link"></span>
+                            <span class="ibm-item-note ibm-alert-link"></span>
+                        </p>
+                    </div>
+                    {{/with}}
+                    <div class="ibm-padding-bottom-30">
+                        <p>{{unica.copy}}</p>
+                        <p>
+                            <select id="{{unica.selection_name}}" class="js-states form-control"></select>
+                            <span class="ibm-item-note ibm-confirm-link"></span>
+                            <span class="ibm-item-note ibm-alert-link"></span>
+                        </p>
+                    </div>
+                    {{#with fields}}
+                    <div class="ibm-padding-bottom-30">
+                        <p class="unica-version">{{tacticCampaignCode.copy}}</p>
+                        <p>
+                            <input type="text" value="" size="40" maxlength="255" id="{{tacticCampaignCode.field_name}}" name="{{tacticCampaignCode.field_name}}" placeholder="{{tacticCampaignCode.placeholder}}">
+                            <span class="ibm-item-note ibm-confirm-link"></span>
+                            <span class="ibm-item-note ibm-alert-link"></span>
+                        </p>
+                        <p class="unica-valid">{{tacticCampaignCode.unica_valid_txt}}</p>
+                    </div>
+                    <div class="ibm-padding-bottom-30">
+                        <p>{{unicaOfferCode.copy}}</p>
+                        <p>
+                            <input type="text" value="" size="40" maxlength="255" id="{{unicaOfferCode.field_name}}" name="{{unicaOfferCode.field_name}}" placeholder="{{unicaOfferCode.placeholder}}">
+                        </p>
+                    </div>
+                    {{/with}} 
+                    {{#if isUngated}}
+                    <div class="ibm-padding-bottom-30">
+                        <p>{{offerType_copy}}</p>
+                        <p>
+                            <select id="{{offerType.selection_name}}" class="js-states form-control" style="width:330px;" {{#if ../isEdit}} disabled="true" {{/if}}></select>
+                            <span class="ibm-item-note ibm-confirm-link"></span>
+                            <span class="ibm-item-note ibm-alert-link"></span>
+                        </p>
+                    </div>
+                    {{/if}}
+
+                    {{#with fields}}
+                    <div class="ibm-padding-bottom-30">
+                        <p class="asset">{{{assetUrl.copy}}}</p>
+                        <input type="text" value="" size="40" maxlength="255" id="{{assetUrl.field_name}}" name="{{assetUrl.field_name}}" placeholder="{{assetUrl.placeholder}}" {{#if ../isEdit}} class="disabled" readonly="true" {{/if}}>
+                        <span class="ibm-item-note ibm-confirm-link"></span>
+                        <span class="ibm-item-note ibm-alert-link"></span>
+                        </p>
+                        <p class="ibm-error">here is a bunch of stuff</p>
+                    </div>
+                    {{/with}}
+
+                </div>
+            </div>
+            <div class="ibm-col-6-3">
+                <p>{{languages.copy}}</p>
+                <p class="ibm-fontsize-body">{{languages.sub_copy}}</p>
+                <p>
+                    <select id="{{languages.selection_name}}" {{#if isEdit}} disabled="true" {{/if}}></select>
+                </p>
+                <div class="ibm-form-elem-grp ibm-padding-bottom-30">
+                    <p class="owner ibm-padding-top-30">
+                        <span>{{owner_title}}</span>
+                        <span class="ibm-alert-link"></span>
+                        <span class="ibm-confirm-link"></span></p>
+                    <p class="ibm-fontsize-body">{{owner_sub_copy}}</p>
+                    <span class="ibm-radio-group">
+                        <p><input id="{{radio1.id}}" name="radiogrp2" type="radio" value="{{radio1.id}}" /> <label for="{{radio1.id}}">{{radio1.text}}</label></p>                       
+                        <p><input id="{{radio2.id}}" name="radiogrp2" type="radio" value="{{radio2.id}}" /> <label for="{{radio2.id}}">{{radio2.text}}</label></p>
+                    </span>
+                    <p class="ibm-padding-top-30 clearfix">
+                        <select id="{{wwbu.selection_name}}" class="js-states form-control" style="width: 330px"></select>
+                    </p>
+                    <p class="ibm-padding-top-30 clearfix">
+                        <select id="{{iot.selection_name}}" class="js-states form-control" style="width: 330px"></select>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibm-band bottom-btn-bar">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                <p><a href="#" class="ibm-btn-sec previous">{{{previous_btn_txt}}}</a></p>
+            </div>
+            <div class="ibm-col-6-3">
+                {{#each buttons}}
+                <p>
+                    <input type="button" value="{{btn_txt}}" disabled class="ibm-btn-pri">
+                </p>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

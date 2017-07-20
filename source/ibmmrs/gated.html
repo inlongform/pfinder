@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {{>pre-head}}
+</head>
+
+<body id="ibm-com" class="preview">
+    <!--ibm-content-expand ibm-default-->
+    <div id="ibm-top" class="ibm-landing-page">
+        {{>masthead}}
+        <div id="ibm-content-wrapper">
+            <main role="main">
+                <div id="ibm-pcon">
+                    <div id="ibm-content">
+                        <div id="ibm-content-body ibm-padding-bottom-0">
+                            <div id="ibm-content-main">
+                                <div class="ibm-band ibm-padding-top-30 ibm-padding-bottom-60" id="new-back" style="background: transparent url('http://w3-01.ibm.com/marketing/automation/iwmdocs/web/formbuilder/assets/img/sharedImages/Background_Image_Teal.jpg') no-repeat top center; background-size: cover;">
+                                    <div class="ibm-columns" id="mrs-wrap">
+                                        <div class="ibm-col-2-1">
+                                            <div class="inner user-content">
+                                                <!-- user content goes here -->
+                                            </div>
+                                        </div>
+                                        <div class="lborder"></div>
+                                        <div class="ibm-col-2-1 seperator">
+                                            <div class="inner">
+                                                <div class="sep"></div>
+                                            </div>
+                                        </div>
+                                        <div class="ibm-col-2-1">
+                                            <!-- <div class="lborder"></div> -->
+                                            <div class="inner">
+                                                <div class="ibm-row-form">
+                                                    <h4 class="ibm-h4 ibm-bold ibm-padding-bottom-30 f-title">Business Contact Information </h4>
+                                                    <p class="ibm-h6 req-info"><span class="ibm-required">*</span>Required Field</p>
+                                                </div>
+                                                <form enctype="multipart/form-data" action="" method="post" id="mrs-form">
+                                                    <!-- //form goes here -->
+                                                    <div class="ibm-row-form">
+                                                        <div class="ibm-form-elem-grp ibm-padding-bottom-15 ibm-padding-top-30">
+                                                            <div id="privacyid" class="ibm-notice-choice-container">
+                                                                <input type="checkbox" onclick="onChangeNCOptionsFunction();" checked="checked" name="NC_CHECK_AllMedia" value="0" id="NC_CHECK_AllMedia">
+                                                                <label>Please keep me informed of products, services and offerings from IBM companies worldwide.</label>
+                                                            </div>
+                                                            <p>I accept IBM’s <a href="http://www.ibm.com/privacy/us/en" target="_blank">Privacy statement</a>.</p>
+                                                        </div>
+                                                        <p>
+                                                            <button type="submit" class="ibm-btn-pri ibm-textcolor-blue-50 submit_btn" value="Submit" form="mrs-form" onclick="return false;"><!-- cta goes here --></button>
+                                                        </p>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer role="contentinfo" aria-label="IBM">
+            <div id="ibm-footer">
+                <ul>...{footer links here}...</ul>
+            </div>
+        </footer>
+    </div>
+    {{> scripts}}
+    <script>
+
+    new IBM.mrs.Preview();
+    </script>
+</body>
+
+</html>

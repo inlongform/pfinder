@@ -1,0 +1,55 @@
+<div class="page login_tmp" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                <div class="headline ibm-padding-top-30">
+
+                    {{{title}}}
+                </div>
+            </div>
+            <div class="ibm-col-6-3">
+       
+                <div class="new-info inner">
+                    <h4 class="ibm-h4">{{new_module.new_user_title}}</h4>
+                    <div class="ibm-rule ibm-alternate ibm-gray-30"><hr></div>
+                    <p>{{{new_module.new_user}}}</p>
+                    <p>{{{new_module.how_access}}}</p>
+                    <p>{{{new_module.community}}}</p>
+                </div>
+                <div class="ibm-column-form login-module inner">
+                    <h3 class="ibm-h3">{{copy}}</h3>
+                    <p>
+                        <input type="text" value="" size="40" id="username" name="username" placeholder="{{login_module.uname_placeholder}}">
+                    </p>
+                    <p>
+                        <input type="password" value="" size="40" id="password" name="password" placeholder="{{login_module.pass_placeholder}}">
+                    </p>
+                    <p class="ibm-error">{{login_module.errorTxt}}</p>
+                    <p>
+                        {{#each buttons}}
+                            <input type="button" value="{{btn_txt}}" class="ibm-btn-pri"> 
+                        {{/each}}
+                    </p>
+                    <p><a href="{{login_module.forgot_url}}" target="_blank">{{login_module.forgot_txt}}</a></p>
+                    {{!-- <div class="ibm-rule ibm-alternate ibm-gray-30"><hr></div> --}}
+                    {{!-- <p>{{new_user}}<br/><a href="{{request_url}}" target="_blank">{{request_txt}}</a></p> --}}
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ibm-band">
+        <div class="ibm-columns cards ibm-padding-top-60">
+
+        {{#each items}}
+            <div class="ibm-col-6-2">
+                <div class="inner">
+                    <div class="icon" style="background-position: {{position}}"></div>
+                    <h4 class="ibm-h2">{{title}}</h4>
+                    <p>{{copy}}</p>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+</div>

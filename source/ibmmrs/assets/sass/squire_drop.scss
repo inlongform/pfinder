@@ -1,0 +1,253 @@
+
+.drop {
+    border: 1px solid $alto;
+    padding: 14px;
+    background: $white;
+
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0), 0 0 10px $black_10;
+
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    margin-top: 5px;
+
+    .btn {
+        background: #4178be;
+        border-color: #4178be;
+        color: #fff;
+        padding: .7em 1.125em .7em;
+        font-size: 16px;
+        line-height: 19.2px;
+        overflow: hidden;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    input[type=text] {
+        background-color: $white;
+        vertical-align: middle;
+        max-width: 100%;
+        border: 1px solid $color_aluminium_approx;
+        border-color: $color_aluminium_approx $iron $iron;
+        color: $color_scarpa_flow_approx;
+
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: border linear 150ms;
+        font-size: 14px;
+        padding: 5px;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.drop-element {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    position: absolute;
+    display: none;
+
+    &:after {
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
+
+    &:before {
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+    }
+
+    .fa {
+        margin-left: 5px;
+    }
+
+    * {
+        //Instead of the line below you could use @include box-sizing($bs)
+        box-sizing: border-box;
+        float: left;
+
+        &:after {
+            //Instead of the line below you could use @include box-sizing($bs)
+            box-sizing: border-box;
+        }
+
+        &:before {
+            //Instead of the line below you could use @include box-sizing($bs)
+            box-sizing: border-box;
+        }
+    }
+
+    &.drop-open {
+        display: block;
+    }
+
+    &.drop-theme-arrows {
+        max-width: 100%;
+        max-height: 100%;
+
+        .drop-content {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 5px;
+            position: relative;
+            font-family: inherit;
+            background: $color_gallery_approx;
+            color: $color_tundora_approx;
+            padding: 1em;
+            font-size: 1.1em;
+            line-height: 1.5em;
+
+            //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+            transform: translateZ(0);
+            filter: drop-shadow(0 1px 4px $black_20);
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-width: 16px;
+                border-style: solid;
+            }
+        }
+
+        &.drop-element-attached-bottom {
+            &.drop-element-attached-left {
+                &.drop-target-attached-top .drop-content {
+                    margin-bottom: 16px;
+
+                    &:before {
+                        top: 100%;
+                        left: 16px;
+                        border-top-color: $color_gallery_approx;
+                    }
+                }
+
+                &.drop-target-attached-right .drop-content {
+                    margin-left: 16px;
+
+                    &:before {
+                        bottom: 16px;
+                        right: 100%;
+                        border-right-color: $color_gallery_approx;
+                    }
+                }
+            }
+
+            &.drop-element-attached-right {
+                &.drop-target-attached-top .drop-content {
+                    margin-bottom: 16px;
+
+                    &:before {
+                        top: 100%;
+                        right: 16px;
+                        border-top-color: $color_gallery_approx;
+                    }
+                }
+
+                &.drop-target-attached-left .drop-content {
+                    margin-right: 16px;
+
+                    &:before {
+                        bottom: 16px;
+                        left: 100%;
+                        border-left-color: $color_gallery_approx;
+                    }
+                }
+            }
+
+            &.drop-element-attached-center .drop-content {
+                margin-bottom: 16px;
+
+                &:before {
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -16px;
+                    border-top-color: $color_gallery_approx;
+                }
+            }
+        }
+
+        &.drop-element-attached-top {
+            &.drop-element-attached-left {
+                &.drop-target-attached-bottom .drop-content {
+                    margin-top: 16px;
+
+                    &:before {
+                        bottom: 100%;
+                        left: 16px;
+                        border-bottom-color: $color_gallery_approx;
+                    }
+                }
+
+                &.drop-target-attached-right .drop-content {
+                    margin-left: 16px;
+
+                    &:before {
+                        top: 16px;
+                        right: 100%;
+                        border-right-color: $color_gallery_approx;
+                    }
+                }
+            }
+
+            &.drop-element-attached-right {
+                &.drop-target-attached-bottom .drop-content {
+                    margin-top: 16px;
+
+                    &:before {
+                        bottom: 100%;
+                        right: 16px;
+                        border-bottom-color: $color_gallery_approx;
+                    }
+                }
+
+                &.drop-target-attached-left .drop-content {
+                    margin-right: 16px;
+
+                    &:before {
+                        top: 16px;
+                        left: 100%;
+                        border-left-color: $color_gallery_approx;
+                    }
+                }
+            }
+
+            &.drop-element-attached-center .drop-content {
+                margin-top: 16px;
+
+                &:before {
+                    bottom: 100%;
+                    left: 50%;
+                    margin-left: -16px;
+                    border-bottom-color: $color_gallery_approx;
+                }
+            }
+        }
+
+        &.drop-element-attached-right.drop-element-attached-middle .drop-content {
+            margin-right: 16px;
+
+            &:before {
+                left: 100%;
+                top: 50%;
+                margin-top: -16px;
+                border-left-color: $color_gallery_approx;
+            }
+        }
+
+        &.drop-element-attached-left.drop-element-attached-middle .drop-content {
+            margin-left: 16px;
+
+            &:before {
+                right: 100%;
+                top: 50%;
+                margin-top: -16px;
+                border-right-color: $color_gallery_approx;
+            }
+        }
+    }
+}

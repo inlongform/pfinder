@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    {{>head}}
+</head>
+
+<body id="ibm-com" class="ibm-type">
+    <!--ibm-content-expand ibm-default-->
+    <div id="ibm-top" class="ibm-landing-page">
+        <!-- MASTHEAD_BEGIN -->
+        {{>masthead}}
+        <div id="ibm-content-wrapper">
+            {{>top-nav}}
+            <main role="main">
+                <div id="ibm-pcon">
+                    <div id="ibm-content">
+                        <div id="ibm-content-body">
+                            <div id="ibm-content-main">
+                                <div class="pages top-section">
+                                    <!-- breadcrumbs -->
+                                    <div class="ibm-band" id="breadcrumbs"></div>
+                                    <!-- end breadcrumbs -->
+                                    <!-- stuff goes here -->
+                                </div>
+                                <div class="my-forms top-section">
+
+                                <!-- stuff goes here -->
+                                </div>
+                                <div class="best-practices top-section">
+                                    <!-- stuff goes here -->
+                                </div>
+                                <div class="faq top-section">
+                                    <!-- stuff goes here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        {{>footer}}
+    </div>
+    {{> loader}} 
+    {{> scripts}}
+    <script>
+
+        new IBM.mrs.App();
+    </script>
+</body>
+
+</html>

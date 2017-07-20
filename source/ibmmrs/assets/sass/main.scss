@@ -1,0 +1,43 @@
+@import "vars";
+@import "icons";
+@import "global";
+
+/*this is for square drop and squire ui8*/
+$color_mine_shaft_approx: #333;
+$white: #fff;
+$color_celeste_approx: #ccc;
+$black_75: rgba(0, 0, 0, 0.075);
+$black_20: rgba(0, 0, 0, 0.2);
+$black_10: rgba(0, 0, 0, 0.1);
+$black: #000;
+$color_gallery_approx: #eee;
+$color_scarpa_flow_approx: #516066;
+$color_aluminium_approx: #a8afb2;
+$iron: #d4d7d9;
+$color_picton_blue_approx: #55acee;
+$alto: #dbdbdb;
+$color_tundora_approx: #444444;
+
+#ibm-pcon {
+    #ibm-content {
+        #ibm-content-body {
+        	padding-top: 0;
+            #ibm-content-main {
+            	font-size: 16px;
+                @import "app";    
+	            @import "resources";
+
+            }
+        }
+    }
+}
+
+
+@import "squire_drop";
+@import "font-awesome/font-awesome";
+@import "preGated";
+@import "preUngated";
+@import "loader";
+
+
+

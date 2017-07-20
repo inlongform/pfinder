@@ -1,0 +1,31 @@
+<div class="page select_tmp" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-4">
+                <div class="section_icon" style="background-position: 0 {{section_yposition}}"></div>
+                <h2 class="ibm-h2 ibm-padding-bottom-30">{{copy}}</h2>
+                <form >
+                    <div class="ibm-padding-bottom-30">
+                        <div class="select-wrap">
+                            
+                                <select id="offer" class="js-states form-control" style="width: 330px "></select>
+                            
+                        </div>
+                    </div>
+                </form>
+                {{#each buttons}}
+                    <p>
+                        <input type="button" value="{{btn_txt}}" disabled class="ibm-btn-pri">
+                    </p>
+                {{/each}}             
+            </div>
+        </div>
+    </div>
+    <div class="ibm-band bottom-btn-bar">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                <p><a href="#" class="ibm-btn-sec previous">{{{previous_btn_txt}}}</a></p>
+            </div>
+        </div>
+    </div>
+</div>

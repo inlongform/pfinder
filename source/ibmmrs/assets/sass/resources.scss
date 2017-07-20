@@ -1,0 +1,95 @@
+#best-practices {
+    padding: 0;
+
+    .ibm-band {
+        padding: 0;
+    }
+
+    .stripes {
+        div {
+            height: 26px;
+            width: 100%;
+        }
+    }
+
+    .ibm-col-6-4 {
+        padding: 70px 0;
+        float: right;
+
+        .res-module {
+            border-bottom: 1px solid #ECECEC;
+
+            h2 {
+                font: (50px / normal) $font-light;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            hr {
+                display: block;
+                height: 1px;
+                border: 0;
+                border-top: 1px solid #ECECEC;
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    .ibm-col-6-2 {
+        margin: 0;
+        padding-top: 70px;
+        position: fixed;
+
+        ul {
+            margin-left: 20px;
+
+            li {
+                padding: 0;
+                margin-bottom: 20px;
+                position: relative;
+
+                a.active {
+                    background: #FFF;
+                    color: #AEAEAE;
+
+                    &:before {
+                        background: #FF7832;
+                    }
+                }
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 16px;
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        height: 24px;
+                        width: 2px;
+                        background: none;
+                        margin-right: 5px;
+                        left: -7px;
+                    }
+
+                    &:hover {
+                        &:before {
+                            background: #FF7832;
+                        }
+                    }
+
+                    // &:hover {
+                    //  text-decoration: underline;
+                    // }
+               
+                }
+            }
+        }
+    }
+}
+
+.best-practices {
+    display: none;
+}

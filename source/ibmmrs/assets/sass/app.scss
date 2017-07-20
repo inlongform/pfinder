@@ -1,0 +1,1007 @@
+#faq {
+    padding: 70px 0;
+}
+
+#plan_response {
+    input[class*="ibm-btn-"][class*="-pri"] {
+        width: 325px;
+    }
+}
+
+.ibm-previous-link.previous span {
+    margin-left: 5px;
+}
+
+#no_gate1,
+#no_gate2,
+#no_gate3,
+#no_gate4,
+#understand {
+    input[class*="ibm-btn-"][class*="-pri"] {
+        width: 260px;
+    }
+}
+
+.page {
+    padding-bottom: 175px;
+    font-family: $font-light;
+}
+
+.faq {
+    display: none;
+
+    h1,
+    h2 {
+        color: $ibm-cool-grey-50;
+        font-family: $font-light;
+    }
+
+    .ibm-show-hide {
+        h2 {
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+
+            &:hover {
+                background: $ibm-cool-grey-10;
+            }
+        }
+
+        a {
+            font: (20px / normal) $font-light;
+            color: $ibm-cool-grey-50;
+            border-top: 7px solid #FFF;
+            
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:before {
+                right: 20px;
+                left: inherit;
+            }
+        }
+
+        .ibm-container-body {
+            padding-right: 80px;
+            a {
+                font-size: 16px;
+                color: $ibm-blue-40;
+                border: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .ibm-plain-list,
+            ol {
+                padding: 0 0 20px 30px;
+            }
+
+            p {
+                padding: 0 20px 20px 30px;
+
+                &:first-child {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+//global
+p,
+ul,
+ol,
+h2,
+h3,
+h4,
+td {
+    color: $ibm-cool-grey-50;
+    font-family: $font-light;
+}
+
+a {
+    color: $ibm-blue-40;
+}
+
+.ibm-btn-pri:disabled {
+    background: $ibm-grey-20;
+    color: $color-white;
+
+    &:hover {
+        background: $ibm-grey-20;
+        color: $color-white;
+    }
+}
+
+.ibm-btn-pri {
+    background: $ibm-green-30;
+    border: none;
+
+    &:hover {
+        background: $ibm-green-40;
+    }
+}
+
+.ibm-btn-sec {
+    color: $ibm-green-30;
+    border-color: $ibm-green-30;
+    width: 188px;
+    display: inline-block;
+
+    &:hover {
+        color: $ibm-green-40;
+        border-color: $ibm-green-40;
+        background: transparent;
+    }
+}
+
+.home_tmp {
+    .ibm-band:first-child {
+        padding-top: 70px;
+        background: $ibm-cool-grey-10;
+    }
+
+    padding-bottom: 70px;
+
+    iframe {
+        width: 100%;
+    }
+
+    ul {
+        li {
+            overflow: hidden;
+            padding-left: 0;
+
+            span {
+                float: left;
+            }
+
+            &:before {
+                content: "";
+            }
+        }
+    }
+}
+
+.forms_tmp {
+    padding-bottom: 60px;
+
+    .select2-container {
+        margin-left: 15px;
+    }
+
+    h1 {
+        font: (50px / normal) $font-light;
+        color: $ibm-cool-grey-50;
+    }
+
+    .ibm-band:first-child {
+        background: $ibm-cool-grey-10;
+    }
+
+    .dataTables_wrapper {
+        padding: 0;
+
+        .dataTable_custom {
+            float: left;
+        }
+
+        .ibm-band {
+            margin-bottom: 30px;
+        }
+
+        .dataTable-toolbar {
+            overflow: hidden;
+        }
+
+        .dataTables_filter {
+            label {
+                float: left;
+            }
+
+            .ibm-search-link {
+                margin-left: 10px;
+                color: black;
+                padding: 0;
+            }
+
+            input {
+                outline: none;
+                height: 2.25em;
+                line-height: 2.25em;
+                text-indent: 10px;
+                border: 1px solid #959f9f;
+                font-style: normal;
+                max-width: 100%;
+                transition: .3s border-color, .3s background;
+                padding-right: 10px;
+
+                &:focus {
+                    border-color: $ibm-green-30;
+                }
+            }
+        }
+
+        table.dataTable {
+            table-layout: fixed;
+            width: 100%;
+
+            thead {
+                th {
+                    color: $ibm-cool-grey-50;
+                    white-space: nowrap;
+                    font-family: $font-light;
+                    border-bottom: none !important;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                td {
+                    border-bottom: none !important;
+                }
+
+                .sorting,
+                .sorting_desc,
+                .sorting_asc {
+                    font-weight: normal;
+                    background-position: center left !important;
+                    background: none;
+
+                    &:before {
+                        font-family: 'icomoon' !important;
+                        content: "\e904";
+                        font-size: 10px;
+                        margin-right: 5px;
+                    }
+                }
+
+                .sorting_desc:before {
+                    content: "\e904";
+                }
+
+                .sorting:before {
+                    content: "\e905";
+                }
+
+                .sorting_asc:before {
+                    content: "\e903";
+                }
+            }
+
+            tbody {
+                td {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    font-family: $font-regular;
+                    border-right: 1px solid #979797;
+                    padding: 10px 20px !important;
+
+                    table {
+                        width: 100%;
+
+                        tr {
+                            background: $color-white!important;
+
+                            td {
+                                border: none;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    .circle {
+                        width: 40px;
+                        height: 40px;
+                        -webkit-border-radius: 25px;
+                        -moz-border-radius: 25px;
+                        border-radius: 25px;
+                        background: $ibm-cool-grey-10;
+                        display: block;
+                        margin: 0 auto;
+                        line-height: 2.5;
+                    }
+
+                    a.plus {
+                        font-family: $font-light;
+                        color: $ibm-cool-grey-50;
+                        font-size: 30px;
+
+                        &:before {
+                            content: "+";
+                        }
+                        &.minus:before {
+                            content: "-";
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .stripe{
+                    background: $ibm-neutral-white-30;
+                }
+
+
+            }
+        }
+
+        .paginate {
+            float: right;
+
+            a {
+                display: block;
+                color: $ibm-green-30;
+                float: left;
+                padding: 5px 10px;
+
+                &.active {
+                    background: $ibm-cool-grey-10;
+                    color: $ibm-cool-grey-50;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                // &.prev{
+                //     visibility: hidden;
+                // }
+           
+            }
+        }
+    }
+}
+
+.login_tmp {
+    .ibm-h2,
+    .ibm-h3 {
+        color: $ibm-cool-grey-50;
+    }
+
+    .ibm-error {
+        display: none;
+    }
+
+    .ibm-band:first-child {
+        // background: #DFE9E9 url(#{$image-path}/login_bck.png) no-repeat right top;
+        background: #DFE9E9 url(#{$image-path}/stripes.svg) no-repeat right top;
+        background-size: 2000px 400px;
+        .ibm-col-6-2 {
+            background: $color-white;
+            text-align: left;
+            float: right;
+            width: 380px;
+        }
+    }
+
+    .ibm-band {
+        padding: 50px;
+
+        .ibm-columns {
+            position: relative;
+
+            h2 {
+                text-align: center;
+            }
+
+            .new-info,
+            .login-module,
+            input {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                float: left;
+            }
+
+            .new-info {
+                width: 40%;
+                background: $color-white;
+                background: $color-white-50;
+                margin-right: 2px;
+
+                p {
+                    padding-bottom: 7px;
+                    line-height: normal;
+                }
+
+                h4 {
+                    padding: 0;
+                }
+
+                .ibm-rule.ibm-alternate {
+                    margin: 7px 0;
+                }
+            }
+
+            .login-module {
+                width: 55%;
+                float: left;
+                background: $color-white;
+            }
+
+            .ibm-col-6-2 {
+                text-align: center;
+
+                .ibm-column-form {
+                    text-align: left;
+                }
+
+                .icon {
+                    width: 150px;
+                    height: 150px;
+                    background: url(#{$image-path}/login_icons.png) no-repeat left top;
+                    margin: 0 auto 30px auto;
+                }
+            }
+        }
+
+        .ibm-columns.cards {
+            .inner {
+                padding: 0 70px;
+            }
+        }
+    }
+}
+
+.btns_tmp {
+    .tips {
+        a {
+            display: block;
+            margin-bottom: 20px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .ibm-tooltip-content p {
+            font-size: 20px;
+        }
+    }
+}
+
+.btns_tmp,
+.fields_tmp,
+.select_tmp,
+.complete_tmp {
+    padding-top: 60px;
+
+    .icon-group {
+        background: url(#{$image-path}/stage_bck.png) center top no-repeat;
+
+        .ibm-btn-pri {
+            min-width: 120px;
+        }
+    }
+
+    .ibm-band {
+        text-align: center;
+
+        p {
+            font-size: 20px;
+        }
+
+        .ibm-fontsize-body {
+            font-size: 16px;
+            clear: both;
+        }
+
+        .ibm-btn-pri {
+            margin: 0 10px 20px 10px;
+        }
+
+        .section_icon {
+            background: url(#{$image-path}/section_icons.png) left top no-repeat;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px auto;
+        }
+
+        .ibm-h1,
+        .ibm-h2 {
+            color: $ibm-cool-grey-50;
+            font-family: $font-light;
+        }
+
+        .ibm-col-6-4,
+        .ibm-col-6-5 {
+            float: none;
+            margin: 0 auto;
+        }
+
+        .ibm-form-elem-grp {
+            float: none;
+        }
+    }
+}
+
+.fields_tmp {
+    select {
+        width: 331px;
+    }
+
+    input.disabled {
+        background-color: #ececec;
+        color: #777677;
+    }
+
+    .ibm-band {
+        text-align: left;
+
+        h2 {
+            position: relative;
+            text-indent: 50px;
+
+            &:before {
+                content: "";
+                background: url(#{$image-path}/section_icons.png) left -1038px no-repeat;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -16px;
+                left: -35px;
+            }
+
+            &.ungated {
+                &:before {
+                    background-position: left -1138px;
+                }
+            }
+        }
+
+        .ibm-col-6-2,
+        .ibm-col-6-3 {
+            clear: both;
+        }
+
+        label {
+            font-size: 16px;
+        }
+
+        p.owner {
+            overflow: hidden;
+
+            span {
+                float: left;
+            }
+        }
+    }
+
+    .ibm-error {
+        display: none;
+    }
+
+    .ibm-alert-link,
+    .ibm-confirm-link {
+        position: relative;
+        display: none;
+        float: left;
+
+        &:before {
+            margin-left: 10px;
+        }
+    }
+
+    .ibm-alert-link {
+        color: $ibm-red-40;
+    }
+
+    .ibm-confirm-link {
+        color: $ibm-green-30;
+    }
+
+    p.unica-valid {
+        color: $ibm-green-30;
+        display: none;
+    }
+
+    .ibm-column-form p > span {
+        margin-left: 0 !important;
+        float: left;
+    }
+
+    p.asset span {
+        float: none;
+        display: inline;
+        display: none;
+    }
+}
+
+.select_tmp {
+    .ibm-selectlist-styled {
+        padding-right: 0;
+        width: 100%;
+        border: none;
+    }
+
+    .ibm-band {
+        .section_icon {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+form#language_fields,
+form#optional_fields {
+    .ibm-col-6-2 {
+        margin: 0;
+    }
+
+    .cBox {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+.complete_tmp {
+    table {
+        width: 100%;
+        border: 1px solid $ibm-neutral-white-30;
+        border-collapse: initial;
+        font-family: $font-light;
+        text-align: left;
+        margin-top: 30px;
+
+        tr {
+            td {
+                padding: 20px;
+                width: 50%;
+                font-size: 20px;
+                word-break: break-word;
+            }
+
+            &:nth-child(odd) {
+                background: $ibm-neutral-white-30;
+            }
+        }
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #redirect {
+        #redirect-box label {
+            font-family: $font-regular;
+            font-size: 16px;
+            color: $ibm-cool-grey-50;
+        }
+
+        .redirect-controls {
+            display: none;
+
+            .ibm-column-form input[type="text"] {
+                float: none;
+            }
+
+            .ibm-item-note {
+                font-family: $font-regular;
+                display: none;
+
+                &.success {
+                    color: $ibm-green-30;
+                }
+
+                &.error {
+                    color: $ibm-red-40;
+                }
+            }
+
+            p {
+                padding: 0;
+
+                .ibm-btn-pri {
+                    min-width: 0;
+                    background: $ibm-blue-40;
+                }
+            }
+        }
+    }
+
+    .tooltip {
+        font-size: 20px;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .preview-link {
+        background: #EFEFF1;
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    .ibm-confirm-link:before {
+        right: 0;
+        top: 4px;
+        position: relative;
+    }
+
+    .ibm-confirm-link.ibm-textcolor-green-40 {
+        text-indent: -27px;
+        margin-left: 50px;
+
+        &:before {
+            margin-right: 10px;
+            top: 25px;
+        }
+    }
+
+    .pre-prod-wrap {
+        overflow: hidden;
+
+        .pre-prod-link.prod {
+            display: block;
+            margin: 0;
+        }
+
+        .pre-prod-link.show-link {
+            display: block;
+        }
+
+        .pre-prod-link {
+            display: none;
+            float: left;
+
+            p {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.customize_tmp {
+    padding-top: 60px;
+
+    .ibm-col-1-1 {
+        h2 {
+            position: relative;
+            text-indent: 50px;
+            color: $ibm-cool-grey-50;
+            font-family: $font-light;
+            padding-bottom: 0;
+
+            &:before {
+                content: "";
+                background: url(#{$image-path}/section_icons.png) left -1038px no-repeat;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 7px;
+                left: -35px;
+            }
+
+            &.ungated {
+                text-indent: inherit;
+                padding-left: 50px;
+
+                &:before {
+                    background-position: left -1138px;
+                    top: 1px;
+                }
+            }
+        }
+
+        p {
+            margin-left: 50px;
+        }
+    }
+
+    .image-btns {
+        text-align: center;
+        width: 100%;
+        margin: 30px auto;
+        overflow: hidden;
+
+        .iselect_btn,
+        .iupload {
+            width: 300px !important;
+            position: relative;
+        }
+
+        .iupload.image-btn {
+            width: auto !important;
+        }
+
+        .iselect_btn:before {
+            content: "or";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            font-size: 30px;
+            font-family: $font-light;
+            color: $ibm-cool-grey-50;
+            cursor: default;
+        }
+
+        .iselect_btn .prev-icon {
+            background-position: left -51px !important;
+        }
+
+        .iupload .prev-icon {
+            background-position: left top !important;
+        }
+
+        &.upload-btns {
+            width: 100%;
+        }
+
+        .preview-btn,
+        .image-btn {
+            float: left;
+            cursor: pointer;
+            width: 170px;
+            outline: none;
+
+            p {
+                color: $ibm-blue-40;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &.mobile-preview {
+                .prev-icon {
+                    background-position: left bottom;
+                }
+            }
+
+            .prev-icon {
+                width: 50px;
+                height: 51px;
+                margin: 0 auto 10px;
+                background: url(#{$image-path}/customize_icons.png) no-repeat left -204px;
+                display: block;
+            }
+        }
+    }
+
+    textarea {
+        width: 320px;
+        height: 80px;
+        resize: none;
+    }
+
+    .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .ibm-form-elem-grp {
+        width: 100%;
+    }
+
+    .ibm-textcolor-red-50 {
+        display: inline;
+        margin: 0;
+    }
+
+    .edit-content {
+        float: left;
+
+        @import "squire-UI";
+    }
+
+    .ibm-form-elem-grp {
+        padding-bottom: 30px;
+    }
+
+    .active-field {
+        border: 1px solid $ibm-green-30;
+    }
+
+    .img_preview {
+        display: none;
+
+        a {
+            display: block;
+        }
+
+        img {
+            max-width: 185px;
+        }
+    }
+
+    .rpad {
+        padding-right: 150px;
+    }
+
+    .preview_btns {
+        width: 100%;
+        overflow: hidden;
+        background: $color-white;
+
+        a {
+            // width: 50%;
+            // text-align: center;
+            // display: inline-block;
+            border: 1px solid $ibm-grey-20;
+
+            // padding: 20px 0;
+            // -webkit-box-sizing: border-box;
+            // -moz-box-sizing: border-box;
+            // box-sizing: border-box;
+            float: left;
+            font-family: $font-regular;
+            padding: 10px 20px;
+            margin-right: 20px;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            // &:last-child {
+            //     border-left: none;
+            // }
+       
+        }
+    }
+
+    .instructions {
+        position: relative;
+
+        .info-inner {
+            position: fixed;
+            width: 580px;
+            background: $color-white;
+            z-index: 100;
+            overflow: hidden;
+            top: 125px;
+            right: 0;
+
+            .inner {
+                background: $ibm-neutral-white-30;
+                padding: 40px;
+
+                .img-clip {
+                    width: 378px;
+                    height: 182px;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    position: relative;
+
+                    .img-step {
+                        width: 378px;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+
+                .tips {
+                    display: none;
+
+                    p {
+                        padding: 0;
+
+                        &.ibm-bold {
+                            font-family: $font-bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

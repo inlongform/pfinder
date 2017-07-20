@@ -1,0 +1,1395 @@
+{
+    "startId": "0",
+    "loggedInStartId": "1",
+    "field_params_long": [{
+        "name": "COUNTRY",
+        "type": "select",
+        "required": true,
+        "lbl": "Country or Region"
+    }, {
+        "name": "STATE",
+        "type": "select",
+        "required": true,
+        "lbl": "State or Province"
+    }, {
+        "name": "FIRSTNAME",
+        "type": "input",
+        "required": true,
+        "lbl": "First name"
+    }, {
+        "name": "LASTNAME",
+        "type": "input",
+        "required": true,
+        "lbl": "Last name"
+    }, {
+        "name": "EMAIL",
+        "type": "input",
+        "required": true,
+        "lbl": "Work e-mail address"
+    }, {
+        "name": "COMPANY",
+        "type": "input",
+        "required": true,
+        "lbl": "Company"
+    }, {
+        "name": "PHONE",
+        "type": "input",
+        "required": true,
+        "lbl": "Phone"
+    }],
+    "field_params_short": [{
+        "name": "COUNTRY",
+        "type": "select",
+        "required": true,
+        "lbl": "Country or Region"
+    }, {
+        "name": "FIRSTNAME",
+        "type": "input",
+        "required": true,
+        "lbl": "First name"
+    }, {
+        "name": "LASTNAME",
+        "type": "input",
+        "required": true,
+        "lbl": "Last name"
+    }, {
+        "name": "EMAIL",
+        "type": "input",
+        "required": true,
+        "lbl": "Work e-mail address"
+    }, {
+        "name": "COMPANY",
+        "type": "input",
+        "required": true,
+        "lbl": "Company"
+    }],
+    "content": [{
+        "title": "Plan",
+        "main_title": "My Forms > Create new form",
+        "id": "0",
+        "pages": [{
+            "id": "0",
+            "copy": "Sign in",
+            "name": "login",
+            "template": "login_tmp",
+            "title": "<h4 class='ibm-h2'>Welcome to the</h4><h1 class='ibm-h1 ibm-large'><span class='ibm-bold'>MRS</span> Pathfinder</h1>",
+            "new_module": {
+                "new_user_title": "New to this tool?",
+                "new_user": "New user? <a href='https://w3-03.ibm.com/finance/access/initAccessAppRequest.wss?appCode=IWM' target='_blank'>request access</a>",
+                "how_access": "<a href='https://w3-connections.ibm.com/blogs/445e741c-9fcc-4849-8934-1f0d79963ffb/entry/MRS_Pathfinder_Community_is_moving_here?lang=en_us' target='_blank'>View approval process</a>",
+                "community": "<a href='https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wcf9828da45b6_425a_88f4_9ccce3351761/page/MRS%20Pathfinder' target='_blank'>Visit community and FAQs</a>"
+            },
+            "login_module": {
+                "forgot_txt": "Reset Password",
+                "forgot_url": "https://w3-03.ibm.com/profile/update/password/en-us/register.jsp",
+                "uname_placeholder": "Your w3id (Your IBM email)",
+                "pass_placeholder": "Password",
+                "errorTxt": "You've entered an incorrect PW. Please re-enter your PW or if you are a new user, then request access to this tool by clicking on the 'Request Access' link."
+            },
+            "selection_name": "ibmId",
+            "buttons": [{
+                "btn_txt": "Sign in",
+                "section": "0",
+                "next": "1"
+            }],
+            "items": [{
+                "title": "Learn",
+                "copy": "Receive recommedations on whether to gate or ungate your assets",
+                "position": "left top"
+            }, {
+                "title": "Create",
+                "copy": "Build registration forms using the lastest v18 standards",
+                "position": "left -152px;"
+            }, {
+                "title": "Test",
+                "copy": "Enable you to test your form (A/B + MVT testing)",
+                "position": "left -303px;"
+            }]
+
+        }, {
+            "id": "1",
+            "title": "<h2 class='ibm-h2'>Welcome to the</h2><h1 class='ibm-h1 ibm-large'><span class='ibm-bold'>MRS</span> Pathfinder</h1>",
+            "name": "home",
+            "template": "home_tmp",
+            "show_new": true,
+            "material_copy": "What you’ll need to get started:",
+            "video_id": "153553700",
+            "video_info": "Pathfinder Step-by-Step Instructions (3:47)",
+            "buttons": [{
+                "btn_txt": "Create new form",
+                "section": "0",
+                "next": "2",
+                "reset": true
+            }],
+            "items": [{
+                "title": "OV Code",
+                "copy": "Have the OV code ready that is associated with your asset or offer. You will need this in order to complete building your form."
+            }, {
+                "title": "Campaign Project code (Unica 9.1) or Tactic code (Unica 7.5)",
+                "copy": "For Unica 9.1, you will need your Campaign Project Code. For Unica 7.5, you will need your Tactic Code."
+            }, {
+                "title": "URL of Asset",
+                "copy": "You will need to have the URL of your asset in order to complete building your form."
+            }]
+        }, {
+            "id": "2",
+            "copy": "Is the goal of your campaign lead generation?",
+            "sub_copy": "Lead generation campaigns have an expectation that high-quality leads will be passed to sellers as a direct result of the campaign. ",
+            "template": "btns_tmp",
+            "name": "goal",
+            "bread_yposition": ["-23px", "0", "0"],
+            "section_yposition": "0",
+            "previous_btn_txt": "Back",
+            "selection_name": "offerGoal",
+            "buttons": [{
+                "btn_txt": "Yes",
+                "section": "0",
+                "next": "3"
+            }, {
+                "btn_txt": "No",
+                "section": "0",
+                "next": "9"
+            }]
+        }, {
+            "id": "3",
+            "copy": "At what stage of the customer journey will this asset be presented to the customer?",
+            "template": "stage_tmp",
+            "name": "stage",
+            "bread_yposition": ["-46px", "0", "0"],
+            "previous_btn_txt": "Back",
+            "selection_name": "customerStage",
+            "buttons": [{
+                "btn_txt": "Discover",
+                "section": "0",
+                "next": "10",
+                "section_yposition": "-103px"
+            }, {
+                "btn_txt": "Learn",
+                "section": "0",
+                "next": "10",
+                "section_yposition": "-205px"
+            }, {
+                "btn_txt": "Try",
+                "section": "0",
+                "next": "4",
+                "section_yposition": "-307px"
+            }, {
+                "btn_txt": "Buy",
+                "section": "0",
+                "next": "4",
+                "section_yposition": "-409px"
+            }, {
+                "btn_txt": "Adopt",
+                "section": "0",
+                "next": "4",
+                "section_yposition": "-511px"
+            }, {
+                "btn_txt": "Advocate",
+                "section": "0",
+                "next": "4",
+                "section_yposition": "-613px"
+            }]
+        }, {
+            "id": "4",
+            "copy": "What type of content is it?",
+            "name": "offer_type",
+            "template": "select_tmp",
+            "bread_yposition": ["-69px", "0", "0"],
+            "previous_btn_txt": "Back",
+            "section_yposition": "-714px",
+            "buttons": [{
+                "comment": "this is dependent on the selection trybuy=6, no trybuy=5",
+                "btn_txt": "Next",
+                "section": "0",
+                "next": "6"
+            }],
+            "selections": {
+                "selection_name": "offerType",
+                "items": [{
+                    "id": "0",
+                    "text": "Select one",
+                    "next": null
+                }, {
+                    "id": "1",
+                    "text": "Assessment",
+                    "next": "5"
+                }, {
+                    "id": "2",
+                    "text": "Incentive",
+                    "next": "5"
+                }, {
+                    "id": "3",
+                    "text": "Online Demo",
+                    "next": "5"
+                }, {
+                    "id": "4",
+                    "text": "Software Download",
+                    "next": "5"
+                }, {
+                    "id": "5",
+                    "text": "Web seminar - live",
+                    "next": "5"
+                }, {
+                    "id": "6",
+                    "text": "Analyst Research",
+                    "next": "6"
+                }, {
+                    "id": "6",
+                    "text": "Article",
+                    "next": "6"
+                }, {
+                    "id": "8",
+                    "text": "Audio only recording - MP3 - other",
+                    "next": "6"
+                }, {
+                    "id": "9",
+                    "text": "Book",
+                    "next": "6"
+                }, {
+                    "id": "10",
+                    "text": "Brochure",
+                    "next": "6"
+                }, {
+                    "id": "11",
+                    "text": "Call Request Fulfillment",
+                    "next": "6"
+                }, {
+                    "id": "12",
+                    "text": "Catalog",
+                    "next": "6"
+                }, {
+                    "id": "13",
+                    "text": "CD ROM",
+                    "next": "6"
+                }, {
+                    "id": "14",
+                    "text": "Client Reference Guide",
+                    "next": "6"
+                }, {
+                    "id": "15",
+                    "text": "Customer Case Study",
+                    "next": "6"
+                }, {
+                    "id": "16",
+                    "text": "Data Sheet",
+                    "next": "6"
+                }, {
+                    "id": "17",
+                    "text": "ebook",
+                    "next": "6"
+                }, {
+                    "id": "18",
+                    "text": "Event Breakout Sessions",
+                    "next": "6"
+                }, {
+                    "id": "19",
+                    "text": "Event Briefings/ 1:1 Meetings",
+                    "next": "6"
+                }, {
+                    "id": "20",
+                    "text": "Event Hospitality / Networking",
+                    "next": "6"
+                }, {
+                    "id": "21",
+                    "text": "Event Hosted Tours",
+                    "next": "6"
+                }, {
+                    "id": "22",
+                    "text": "Event Materials",
+                    "next": "6"
+                }, {
+                    "id": "23",
+                    "text": "Event Registration",
+                    "next": "6"
+                }, {
+                    "id": "24",
+                    "text": "Event Sessions",
+                    "next": "6"
+                }, {
+                    "id": "25",
+                    "text": "Event Show Floor Scan",
+                    "next": "6"
+                }, {
+                    "id": "26",
+                    "text": "Event Show Floor Visit",
+                    "next": "6"
+                }, {
+                    "id": "27",
+                    "text": "Executive Brief",
+                    "next": "6"
+                }, {
+                    "id": "28",
+                    "text": "Flyer",
+                    "next": "6"
+                }, {
+                    "id": "29",
+                    "text": "Follow-up Call",
+                    "next": "6"
+                }, {
+                    "id": "30",
+                    "text": "Infographic",
+                    "next": "6"
+                }, {
+                    "id": "31",
+                    "text": "Information Kit",
+                    "next": "6"
+                }, {
+                    "id": "32",
+                    "text": "Interactive Online Tool",
+                    "next": "6"
+                }, {
+                    "id": "33",
+                    "text": "Magazine",
+                    "next": "6"
+                }, {
+                    "id": "34",
+                    "text": "Meeting with Sales",
+                    "next": "6"
+                }, {
+                    "id": "35",
+                    "text": "Newsletter",
+                    "next": "6"
+                }, {
+                    "id": "36",
+                    "text": "Performance Benchmark",
+                    "next": "6"
+                }, {
+                    "id": "37",
+                    "text": "Poster",
+                    "next": "6"
+                }, {
+                    "id": "38",
+                    "text": "Product Registration",
+                    "next": "6"
+                }, {
+                    "id": "39",
+                    "text": "Resource Center",
+                    "next": "6"
+                }, {
+                    "id": "40",
+                    "text": "Screensaver",
+                    "next": "6"
+                }, {
+                    "id": "41",
+                    "text": "Services Trial",
+                    "next": "6"
+                }, {
+                    "id": "42",
+                    "text": "Solution Brief",
+                    "next": "6"
+                }, {
+                    "id": "43",
+                    "text": "Solution or Product Guide",
+                    "next": "6"
+                }, {
+                    "id": "44",
+                    "text": "Survey",
+                    "next": "6"
+                }, {
+                    "id": "45",
+                    "text": "Training Course",
+                    "next": "6"
+                }, {
+                    "id": "46",
+                    "text": "Video",
+                    "next": "6"
+                }, {
+                    "id": "47",
+                    "text": "Virtual Conference or Event",
+                    "next": "6"
+                }, {
+                    "id": "48",
+                    "text": "Web seminar - podcast/flash archived",
+                    "next": "6"
+                }, {
+                    "id": "49",
+                    "text": "White paper",
+                    "next": "6"
+                }, {
+                    "id": "50",
+                    "text": "Widget Download",
+                    "next": "6"
+                }]
+            }
+        }, {
+            "id": "5",
+            "copy": "What will you do with the responses to the form?",
+            "name": "plan_response",
+            "template": "btns_tmp",
+            "bread_yposition": ["-92px", "0", "0"],
+            "previous_btn_txt": "Back",
+            "selection_name": "responsesGeneratedPurpose",
+            "buttons": [{
+                "btn_txt": "LDR Follow-Up and E-Nurture",
+                "section": "0",
+                "next": "8",
+                "formType": "long"
+            }, {
+                "btn_txt": "LDR Follow-Up",
+                "section": "0",
+                "next": "8",
+                "formType": "long"
+            }, {
+                "btn_txt": "E-Nurture",
+                "section": "0",
+                "next": "8",
+                "formType": "short"
+            }, {
+                "btn_txt": "I'm not sure",
+                "section": "0",
+                "next": "7"
+            }]
+        }, {
+            "id": "6",
+            "copy": "Do you have other Try/Buy offers present on your most visited page associated with this asset or offer?",
+            "name": "high_vis",
+            "template": "btns_tmp",
+            "previous_btn_txt": "Back",
+            "selection_name": "tryBuyOffersAvailable",
+            "buttons": [{
+                "btn_txt": "Yes",
+                "section": "0",
+                "next": "11"
+            }, {
+                "btn_txt": "No",
+                "section": "0",
+                "next": "5"
+            }]
+        }, {
+            "id": "7",
+            "copy": "Clients respond best to a combination of Discover/Learn and Try/Buy offers.",
+            "sub_copy": "If you’d like to continue, consider creating an ungated Discover/Learn<br/>offer and attaching a Voluntary Response Capture Form.",
+            "bread_yposition": ["-92px", "0", "0"],
+            "section_yposition": "-918px",
+            "name": "understand",
+            "template": "btns_tmp",
+            "previous_btn_txt": "Back",
+            "buttons": [{
+                "btn_txt": "Add Response Capture Form",
+                "section": "1",
+                "next": "0",
+                "option": true
+            }, {
+                "btn_txt": "Add Registration Form",
+                "section": "0",
+                "next": "5",
+                "option": false
+            }],
+            "tips": [{
+                "tooltip_title": "What is a Voluntary Response Capture Form?",
+                "tooltip_txt": "<p>A voluntary Response Capture Form is a form that is attached to an ungated asset to capture any responses that your asset may generate. This form will allow your client voluntarily contact you.</p>"
+
+            }, {
+                "tooltip_title": "What are the benefits to ungating your asset?",
+                "tooltip_txt": "<p>An ungated asset will allow your audience to easily share it socially and via email. It will also drive more inbound links and better SEO as well as improve SEO ranking.</p><p>Better SEO and more content sharing means you’re going to drive more traffic to your site -- both new and repeat visitors as your reach grows and you build a loyal audience.</p>"
+            }]
+        }, {
+            "id": "8",
+            "copy": "Step 1 has been completed",
+            "copy_ungated": "Step 1 has been completed",
+            "name": "step1_complete",
+            "template": "complete_tmp",
+            "bread_yposition": ["-115px", "0", "0"],
+            "section_yposition": "-817px",
+            "previous_btn_txt": "Back",
+            "buttons": [{
+                "btn_txt": "Continue",
+                "section": "1",
+                "next": "0"
+            }],
+            "lbls": [{
+                "id": "customerStage",
+                "text": "Customer journey"
+            }, {
+                "id": "offerGoal",
+                "text": "Lead generation"
+            }, {
+                "id": "responsesGeneratedPurpose",
+                "text": "Form responses"
+            }, {
+                "id": "offerType",
+                "text": "Content type"
+            }, {
+                "id": "tryBuyOffersAvailable",
+                "text": "Other Gated Offers Present"
+            }]
+        }, {
+            "id": "9",
+            "template": "btns_tmp",
+            "name": "no_gate1",
+            "copy": "Assets provided to clients should aim to generate leads, otherwise they will not yield high-quality responses.",
+            "sub_copy": "However, you may continue to create a Voluntary<br/>Response Capture Form to your ungated asset.",
+            "bread_yposition": ["-23px", "0", "0"],
+            "section_yposition": "-918px",
+            "previous_btn_txt": "Back",
+            "selection_name": "isUngated",
+            "buttons": [{
+                "btn_txt": "Add Response Capture Form",
+                "section": "1",
+                "next": "0",
+                "option": true
+            }, {
+                "btn_txt": "Add Registration Form",
+                "section": "0",
+                "next": "3",
+                "option": false
+            }],
+            "tips": [{
+                "tooltip_title": "What is a Voluntary Response Capture Form?",
+                "tooltip_txt": "<p>A voluntary Response Capture Form is a form that is attached to an ungated asset to capture any responses that your asset may generate. This form will allow your client voluntarily contact you.</p>"
+
+            }, {
+                "tooltip_title": "What are the benefits to ungating your asset?",
+                "tooltip_txt": "<p>An ungated asset will allow your audience to easily share it socially and via email. It will also drive more inbound links and better SEO as well as improve SEO ranking.</p><p>Better SEO and more content sharing means you’re going to drive more traffic to your site -- both new and repeat visitors as your reach grows and you build a loyal audience.</p>"
+            }]
+        }, {
+            "id": "10",
+            "copy": "Typically assets or offers in the Discover/Learn stage of the customer journey do not yield high-quality responses. It is a best practice not to 'gate' these type of offers.",
+            "sub_copy": "However, you may continue to create a Voluntary<br/>Response Capture Form to your ungated asset.",
+            "template": "btns_tmp",
+            "name": "no_gate2",
+            "bread_yposition": ["-46px", "0", "0"],
+            "section_yposition": "-918px",
+            "previous_btn_txt": "Back",
+            "selection_name": "isUngated",
+            "buttons": [{
+                "btn_txt": "Add Response Capture Form",
+                "section": "1",
+                "next": "0",
+                "option": true
+            }, {
+                "btn_txt": "Add Registration Form",
+                "section": "0",
+                "next": "4",
+                "option": false
+            }],
+            "tips": [{
+                "tooltip_title": "What is a Voluntary Response Capture Form?",
+                "tooltip_txt": "<p>A voluntary Response Capture Form is a form that is attached to an ungated asset to capture any responses that your asset may generate. This form will allow your client voluntarily contact you.</p>"
+
+            }, {
+                "tooltip_title": "What are the benefits to ungating your asset?",
+                "tooltip_txt": "<p>An ungated asset will allow your audience to easily share it socially and via email. It will also drive more inbound links and better SEO as well as improve SEO ranking.</p><p>Better SEO and more content sharing means you’re going to drive more traffic to your site -- both new and repeat visitors as your reach grows and you build a loyal audience.</p>"
+            }]
+        }, {
+            "id": "11",
+            "copy": "If you are unsure of how your responses will be used, consider revisiting your campaign plan before you move forward.",
+            "sub_copy": "Or, ungate your asset and attach a Voluntary Response Capture Form.",
+            "template": "btns_tmp",
+            "name": "no_gate3",
+            "bread_yposition": ["-92px", "0", "0"],
+            "section_yposition": "-918px",
+            "previous_btn_txt": "Back",
+            "selection_name": "isUngated",
+            "buttons": [{
+                "btn_txt": "Add Response Capture Form",
+                "section": "1",
+                "next": "0",
+                "option": true
+            }, {
+                "btn_txt": "Add Registration Form",
+                "section": "0",
+                "next": "8",
+                "option": false
+            }],
+            "tips": [{
+                "tooltip_title": "What is a Voluntary Response Capture Form?",
+                "tooltip_txt": "<p>A voluntary Response Capture Form is a form that is attached to an ungated asset to capture any responses that your asset may generate. This form will allow your client voluntarily contact you.</p>"
+
+            }, {
+                "tooltip_title": "What are the benefits to ungating your asset?",
+                "tooltip_txt": "<p>An ungated asset will allow your audience to easily share it socially and via email. It will also drive more inbound links and better SEO as well as improve SEO ranking.</p><p>Better SEO and more content sharing means you’re going to drive more traffic to your site -- both new and repeat visitors as your reach grows and you build a loyal audience.</p>"
+            }]
+        }]
+    }, {
+        "title": "Create and Customize",
+        "id": "1",
+        "pages": [{
+            "id": "0",
+            "name": "asset-codes",
+            "copy": "Registration Form Information (Gated)",
+            "copy_ungated": "Registration Form Information (Ungated)",
+            "template": "fields_tmp",
+            "bread_yposition": ["-115px", "-23px", "0"],
+            "previous_btn_txt": "Back",
+            "tooltip_title": "Form name",
+            "tooltip_txt": "<p>For internal use only.</p><p>We recommend you use a naming convention like you Business Unit, Campaign Name, month, asset and a unique identifier e.g. GTS_BlackC_06_Video02</p>",
+
+            "buttons": [{
+                "btn_txt": "Next",
+                "section": "1",
+                "next": "1"
+            }],
+            "fields": {
+                "nickname": {
+                    "field_name": "nickname",
+                    "copy": "Name Your Form",
+                    "placeholder": ""
+                },
+                "offerAssetCode": {
+                    "field_name": "offerAssetCode",
+                    "copy": "Asset Code (OV or S_PKG)",
+                    "placeholder": ""
+                },
+                "tacticCampaignCode": {
+                    "field_name": "tacticCampaignCode",
+                    "copy": "Campaign Project Code - 9.1",
+                    "placeholder": "",
+                    "unica_valid_txt": "Your Unica [VERSION] code has been validated"
+                },
+                "assetUrl": {
+                    "field_name": "assetUrl",
+                    "copy": "Asset URL <span>(YouTube or Vimeo only)</span>",
+                    "placeholder": ""
+                },
+                "ungatedAssetUrl": {
+                    "field_name": "ungatedAssetUrl",
+                    "copy": "Asset URL <span>(YouTube or Vimeo only)</span>",
+                    "placeholder": "",
+                    "ungated_note_copy": "Please provide an HTTPs Asset URL below.",
+                    "ungated_asset_error_copy": "The URL you entered was HTTP. Please provide an HTTPs URL instead."
+                },
+                "unicaOfferCode": {
+                    "field_name": "unicaOfferCode",
+                    "copy": "Unica Offer Code (Optional)",
+                    "placeholder": ""
+                }
+            },
+            "sda_error_1": "There was an error validating your SDA link.",
+            "sda_error_2": "We are unable to validate this link. Please check the source and provide a valid SDA link.",
+            "sda_error_3": "This asset is not a pdf.",
+            "pdf_error_4": "Please make sure your url is https",
+            "pdf_error_5": "Please use a .pdf extension",
+            "owner_title": "Select the owner of this page",
+            "owner_sub_copy": "In order to enable A/B Testing, please let us know the owner of the page that drives to this form",
+            "radio1": {
+                "text": "Worldwide Business Units (WWBU)",
+                "id": "0"
+            },
+            "radio2": {
+                "text": "Integrated Operational Territory (IOT)",
+                "id": "1"
+            },
+            "unica": {
+                "copy": "Select your Unica version",
+                "selection_name": "campaignCodeVersion",
+                "items": [{
+                    "text": "Unica 9.1",
+                    "id": "9.1",
+                    "option": "Campaign Project Code - 9.1"
+                }, {
+                    "text": "Unica 7.5",
+                    "id": "7.5",
+                    "option": "Tactic Code (S_TACT) - 7.5"
+                }]
+            },
+            "languages": {
+                "copy": "Select the language of your form",
+                "sub_copy": "Your form will be published in US-English by default. If you'd like to publish your form in another language, please select one of the languages below. (Note: By choosing this option, you will be required to enter your marketing copy in the language you have chosen.)",
+                "selection_name": "language",
+                "items": [{
+                    "id": "en_US",
+                    "text": "United States - English"
+                }, {
+                    "id": "pt_BR",
+                    "text": "Brazil - Portuguese"
+                }, {
+                    "id": "en_BE",
+                    "text": "Belgium - English"
+                }, {
+                    "id": "fr_CA",
+                    "text": "Canada - French"
+                }, {
+                    "id": "zh_CN",
+                    "text": "China - Chinese (Simplified)"
+                }, {
+                    "id": "hr_HR",
+                    "text": "Croatia - Croatian"
+                }, {
+                    "id": "cs_CZ",
+                    "text": "Czech Republic - Czech"
+                }, {
+                    "id": "da_DK",
+                    "text": "Denmark - Danish"
+                }, {
+                    "id": "et_EE",
+                    "text": "Estonia - Estonian"
+                }, {
+                    "id": "fi_FI",
+                    "text": "Finland - Finnish"
+                }, {
+                    "id": "fr_FR",
+                    "text": "France - French"
+                }, {
+                    "id": "de_DE",
+                    "text": "Germany - German"
+                }, {
+                    "id": "en_GB",
+                    "text": "Great Britain - English"
+                },{
+                    "id": "hu_HU",
+                    "text": "Hungary - Hungarian"
+                }, {
+                    "id": "he_IL",
+                    "text": "Israel - Hebrew"
+                }, {
+                    "id": "it_IT",
+                    "text": "Italy - Italian"
+                }, {
+                    "id": "ja_JP",
+                    "text": "Japan - Japanese"
+                }, {
+                    "id": "ko_KR",
+                    "text": "Korea, Republic of - Korean"
+                }, {
+                    "id": "es_MX",
+                    "text": "Mexico - Spanish"
+                }, {
+                    "id": "nl_NL",
+                    "text": "Netherlands - Dutch"
+                }, {
+                    "id": "no_NO",
+                    "text": "Norway - Norwegian"
+                }, {
+                    "id": "pl_PL",
+                    "text": "Poland - Polish"
+                }, {
+                    "id": "pt_PT",
+                    "text": "Portugal - Portuguese"
+                }, {
+                    "id": "ro_RO",
+                    "text": "Romania - Romanian"
+                }, {
+                    "id": "ru_RU",
+                    "text": "Russian Federation - Russian"
+                }, {
+                    "id": "sk_SK",
+                    "text": "Slovakia - Slovak"
+                }, {
+                    "id": "sl_SI",
+                    "text": "Slovenia - Slovenian"
+                }, {
+                    "id": "es_ES",
+                    "text": "Spain - Spanish"
+                }, {
+                    "id": "sv_SE",
+                    "text": "Sweden - Swedish"
+                }, {
+                    "id": "fr_CH",
+                    "text": "Switzerland - French"
+                }, {
+                    "id": "de_CH",
+                    "text": "Switzerland - German"
+                }, {
+                    "id": "zh_TW",
+                    "text": "Taiwan - Chinese (Traditional)"
+                }, {
+                    "id": "tr_TR",
+                    "text": "Turkey - Turkish"
+                }, {
+                    "id": "en_UK",
+                    "text": "United Kingdom - English"
+                }]
+            },
+            "wwbu": {
+                "selection_name": "wwbu",
+                "items": [{
+                    "text": "Select Worldwide BU",
+                    "id": ""
+                }, {
+                    "text": "IBM - Analytics",
+                    "id": "BU-IBM-Analytics"
+                }, {
+                    "text": "IBM - Cloud",
+                    "id": "BU-IBM-Cloud"
+                }, {
+                    "text": "IBM - Commerce",
+                    "id": "BU-IBM-Commerce"
+                }, {
+                    "text": "IBM - GBS",
+                    "id": "BU-IBM-GBS"
+                }, {
+                    "text": "IBM - GTS",
+                    "id": "BU-IBM-GTS"
+                }, {
+                    "text": "IBM - Security",
+                    "id": "BU-IBM-Security"
+                }, {
+                    "text": "IBM - Systems",
+                    "id": "BU-IBM-Systems"
+                }, {
+                    "text": "IBM - Watson",
+                    "id": "BU-IBM-Watson"
+                }, {
+                    "text": "IBM - Blogs",
+                    "id": "BU-IBM-Blogs"
+                },{
+                    "text": "IBM - Watson Internet of Things",
+                    "id": "BU-IBM-Watson-IOT"
+                }]
+
+            },
+            "iot": {
+                "selection_name": "iot",
+                "items": [{
+                    "text": "Select Operational IOT",
+                    "id": ""
+                }, {
+                    "text": "Asia Pacific",
+                    "id": "IOT-IBM-Asia-Pacific"
+                }, {
+                    "text": "China",
+                    "id": "IOT-IBM-China"
+                }, {
+                    "text": "Europe",
+                    "id": "IOT-IBM-Europe"
+                }, {
+                    "text": "India",
+                    "id": "IOT-IBM-India"
+                }, {
+                    "text": "Japan",
+                    "id": "IOT-IBM-Japan"
+                }, {
+                    "text": "Middle East & Africa",
+                    "id": "IOT-IBM-Middle-East"
+                }, {
+                    "text": "Latin America",
+                    "id": "IOT-IBM-Latin-America"
+                }, {
+                    "text": "North America",
+                    "id": "IOT-IBM-North-America"
+                }]
+            },
+            "offerType_copy": "Select your asset media type",
+            "offerType": {
+                "selection_name": "offerType",
+                "items": [{
+                    "id": "pdf",
+                    "text": "PDF"
+                }, {
+                    "id": "sda",
+                    "text": "Content Central / SDA"
+                },{
+                    "id": "image",
+                    "text": "Image"
+                }, {
+                    "id": "video",
+                    "text": "Video"
+                }]
+            }
+        }, {
+            "id": "1",
+            "copy": "Registration Form Fields (Gated)",
+            "copy_ungated": "Registration Form Fields (Ungated)",
+            "name": "step2_complete",
+            "template": "complete_tmp",
+            "bread_yposition": ["-115px", "-46px", "0"],
+            "ungated_y": "-1138px",
+            "gated_y": "-817px",
+            "previous_btn_txt": "Back",
+            "required_title": "Required fields",
+            "form_selection": {
+                "required": "Based on your choices, your form will have these required fields to ensure your responses are fully actionable:",
+                "long": {
+                    "items": ["Country or Region", "State or Province", "First Name", "Last Name", "Work E-mail Address", "Phone", "Company"]
+                },
+                "short": {
+                    "items": ["Country or Region", "First Name", "Last Name", "Work E-mail Address", "Company"]
+
+                }
+            },
+            "buttons": [{
+                "btn_txt": "Continue",
+                "section": "1",
+                "next": "2"
+            }],
+            "optional_title": "Optional fields",
+            "optional_txt": "You may add the following optional fields and questions to your form (check all that apply):",
+            "checkBoxes": {
+                "id": "optional",
+                "items": [
+                    [{
+                        "lbl": "Salutation",
+                        "name": "PERSONALTITLE",
+                        "type": "input",
+                        "required": false
+                    }, {
+                        "lbl": "Job Title",
+                        "name": "JOBTITLE",
+                        "type": "input",
+                        "required": false
+                    }]
+                ]
+            }
+        }, {
+            "id": "2",
+            "name": "customize",
+            "template": "customize_tmp",
+            "bread_yposition": ["-115px", "-69px", "0"],
+            "buttons": [{
+                "btn_txt": "Continue",
+                "section": "2",
+                "next": "0"
+            }],
+            "previous_btn_txt": "Back",
+            "ungated": {
+                "preview": "ungated.html",
+                "title": "Create your Voluntary Response<br/>Capture Form (Ungated)",
+                "copy": null,
+                "backImage": "assets/img/stepsUngated.png",
+                "imgHeight": "910px",
+                "items": [
+                    [{
+                        "title": "Instruction",
+                        "copy": "This copy should be the teaser to the contact form CTA."
+                    }],
+                    [{
+                        "title": "Best Practice Tip for Good Call to Actions",
+                        "copy": "This call-to-action should support the Header text"
+                    }],
+                    [{
+                        "title": "Best Practice Tip for Good Headlines",
+                        "copy": "This should be the title of your asset."
+                    }],
+                    [{
+                        "title": "Best Practice Tip for Good Headlines",
+                        "copy": "Additionally, you may add in a couple of descriptive sentences of your asset, if you require extra description."
+                    }],
+                    [{
+                        "title": "Best Practice Tip for Good Call to Actions",
+                        "copy": "This call-to-action should support the Header text."
+                    }]
+                ],
+                "fields": [{
+                    "title": "Header Text",
+                    "placeholder": "",
+                    "id": "headerTxt",
+                    "width": "40",
+                    "minLength": "1",
+                    "errorTxt": "Please add a header"
+
+                }, {
+                    "title": "Header Button Text (CTA)",
+                    "placeholder": "",
+                    "id": "headerBtnTxt",
+                    "width": "40",
+                    "minLength": "1",
+                    "errorTxt": "Please add a header CTA"
+                }, {
+                    "title": "Asset Headline",
+                    "placeholder": "",
+                    "id": "headline",
+                    "width": "40",
+                    "minLength": "1",
+                    "maxLength": "255",
+                    "errorTxt": "Please add an asset headline",
+                    "errorLong": "Asset Headline should not exceed 255 characters."
+                }, {
+                    "title": "Asset Description",
+                    "placeholder": "",
+                    "id": "description",
+                    "isTextArea": true,
+                    "width": "40",
+                    "minLength": "1",
+                    "maxLength": "255",
+                    "errorTxt": "Please add an asset description",
+                    "errorLong": "Asset Description should not exceed 255 characters."
+                }]
+            },
+            "gated": {
+                "preview": "gated.html",
+                "title": "Create your Registration Form (Gated)",
+                "copy": "Edit the copy and upload a background image.<br/>When completed proceed to the next step.",
+                "body_copy": "Body Copy",
+                "upload_copy": "Background image (optional)",
+                "upload_btn": "Upload your<br/>own background",
+                "select_btn": "Select background<br/>from library",
+                "reset_copy": "Reset to default",
+                "bck_title_copy": "Background Image (optional):",
+                "bck_info_copy": "Background images should be no smaller than 1600px by 1200px.<br/>Accepted file formats are jpg or png.",
+                "edit_placeholder": "<p>Enter content here<br></p>",
+                "previous_btn_txt": "Back",
+                "backImage": "assets/img/stepsGated.png",
+                "bread_yposition": ["-115px", "-115px", "0"],
+                "imgHeight": "549px",
+                "fields": [{
+                    "title": "Headline",
+                    "placeholder": "",
+                    "id": "headline",
+                    "width": "40",
+                    "minLength": "1",
+                    "errorTxt": "Please a header"
+                }, {
+                    "title": "Button Text (CTA)",
+                    "placeholder": "",
+                    "id": "submitButtonText",
+                    "width": "20",
+                    "minLength": "1",
+                    "errorTxt": "Please enter a CTA"
+                }],
+                "items": [
+                    [{
+                        "title": "Best Practice Tip for Good Headlines",
+                        "copy": "For engaging headlines, your message should be consistent with the page driving clients to this form.  This will help provide instant context."
+                    }],
+                    [{
+                        "title": "Best Practice Tip for Marketing Copy",
+                        "copy": "To encourage clients to to complete the registration, be sure to include the value and benefit of what they will receive by signing up. "
+                    }],
+                    [{
+                        "title": "Best Practice Tip for Engaging CTAs (Call-to-Action)",
+                        "copy": "Action-oriented CTAs generally perform better.  Examples of terms that work well are &quot;Download Now&quot;, &quot;Start Trial&quot; or &quot;Watch Video&quot;."
+                    }]
+                ]
+            }
+        }]
+    }, {
+        "title": "Review and Publish",
+        "id": "2",
+        "pages": [{
+            "id": "0",
+            "copy": "Review and Post to Preview Server",
+            "copy_ungated": "Review and Post to Preview Server",
+            "name": "review",
+            "template": "complete_tmp",
+            "bread_yposition": ["-115px", "-115px", "-46px"],
+            "ungated_y": "-1138px",
+            "gated_y": "-817px",
+            "previous_btn_txt": "Back",
+            "is_preprod": true,
+            "tooltip_title": "Why post to a preview server?",
+            "tooltip_txt": "<p>Posting to the preview server generates a link to the form where it been posted for private browsing.</p><p>Use this link to allow others to test and review your form before publishing.</p>",
+            "instructions": "Important: You will need to save this link. Currently, this page is not accessible once you have closed this page.",
+            "buttons": [{
+                "btn_txt": "Post to preview",
+                "section": "2",
+                "next": "1"
+            }],
+            "lbls": [{
+                "id": "nickname",
+                "text": "Form Name"
+            }, {
+                "id": "customerStage",
+                "text": "Customer journey"
+            }, {
+                "id": "offerType",
+                "text": "Content type"
+            }, {
+                "id": "offerGoal",
+                "text": "Lead generation"
+            }, {
+                "id": "responsesGeneratedPurpose",
+                "text": "Form responses"
+            }, {
+                "id": "formType",
+                "text": "Form Type"
+            }, {
+                "id": "tryBuyOffersAvailable",
+                "text": "Other Gated Offers Present"
+            }, {
+                "id": "offerAssetCode",
+                "text": "Asset or Offer Code"
+            }, {
+                "id": "unicaOfferCode",
+                "text": "Unica Offer Code"
+            }, {
+                "id": "tacticCampaignCode",
+                "text": "Campaign or Tactic Code"
+            }, {
+                "id": "assetUrl",
+                "text": "Asset URL"
+            }, {
+                "id": "optional",
+                "text": "Optional Fields"
+            }, {
+                "id": "wwbu",
+                "text": "Worldwide Business Units (WWBU)"
+            }, {
+                "id": "iot",
+                "text": "IBM Operational Territory (iOT)"
+            }, {
+                "id": "languageText",
+                "text": "Language"
+            }, {
+                "id": "isUngated",
+                "text": "Ungated"
+            }]
+        }, {
+            "id": "1",
+            "copy": "Review and Publish",
+            "name": "review2",
+            "template": "complete_tmp",
+            "bread_yposition": ["-115px", "-115px", "-92px"],
+            "ungated_y": "-1138px",
+            "gated_y": "-817px",
+            "previous_btn_txt": null,
+            "is_preprod2": true,
+            "success_copy": "You have successfully posted to the preview server!",
+            "body_copy": "It is now live. Embed the following link to a call to action (CTA)<br/>to allow your customers to access this form:",
+            "ready_copy": "When ready continue and publish your form.",
+            "buttons": [{
+                "btn_txt": "Continue to publish",
+                "section": "2",
+                "next": "2"
+            }]
+
+        }, {
+            "id": "2",
+            "name": "success",
+            "template": "complete_tmp",
+            "bread_yposition": ["-115px", "-115px", "-115px"],
+            "ungated_y": "-1138px",
+            "gated_y": "-817px",
+            "link_txt": "Live URL",
+            "copy": "Complete",
+            "success_copy": "You have successfully published your form!",
+            "body_copy": "It is now live. Embed the following link to a call to action<br/>(CTA) to allow your customers to access this form:",
+            "cct_copy": "Enter the URL of your existing CCT form:",
+            "status": {
+                "success": "You have successfully linked your CCT form with your Pathfinder form",
+                "errors": ["There was an error linking your CCT form", "Please enter a valid CCT URL", "This version of unica does not match the pathfinder form"]
+            },
+            "is_complete": true,
+            "buttons": [{
+                "btn_txt": "Home",
+                "url": "/"
+
+            }]
+        }]
+
+    }],
+    "my_forms": {
+        "title": "Forms",
+        "name": "my-forms",
+        "template": "formsPage_tmp",
+        "tooltip_edit": "Edit",
+        "tooltip_preview": "Preview",
+        "tooltip_live": "Live",
+        "tooltip_delete": "Delete",
+        "tdate": "Date",
+        "tdOv": "Ov Code",
+        "tname": "Form Name",
+        "tlanguage": "Language",
+        "ttype": "Type",
+        "tAuthor": "Author",
+        "filterlist-title": "Filter:",
+        "last_edit": "Last edited by:",
+        "last_modified": "Last modified:",
+        "redirect":"CCT Redirect:",
+        "editCustomize":{
+            "section": 1,
+            "page": 0
+        },
+        "editRedirect":{
+            "btn_txt": "Change",
+            "section": 2,
+            "page": 2
+        }
+    },
+    "best_practices": {
+        "title": "Best Practices",
+        "name": "best-practices",
+        "template": "resources_tmp",
+        "items": [{
+            "id": "dont-gate",
+            "label": "Don’t gate assets too early",
+            "content": "<div id='dont-gate' data-id='0' class='res-module ibm-padding-bottom-60'><h2 class='ibm-h2'>Best Practices</h2><p class='ibm-padding-bottom-60'>We've included some best practices below that have been gleaned from performance analysis of thousands of IWM forms. We'll update this list regularly to include performance analysis of Pathfinder forms and insights gained from A/B testing.</p><hr/><h2 class='ibm-h2 ibm-padding-bottom-30'>Don’t gate assets too early</h2><p>MRS forms are often placed too early in the buyer journey, interrupting the customer experience and yielding relatively few responses</p><img src='assets/img/iwm_completion.png' class='ibm-padding-top-30 ibm-padding-top-60'/></div>"
+        }, {
+            "id": "trybuy",
+            "label": "Try/Buy offers perform better",
+            "content": "<div id='trybuy' data-id='1' class='res-module ibm-padding-bottom-60 ibm-padding-top-30'><h2 class='ibm-h2 ibm-padding-bottom-30 ibm-padding-top-30'>Try/Buy offers perform better</h2><p>Analysis shows Try/buy offers perform significantly better than gated Discover/Learn offers</p><img src='assets/img/responses.png' class='ibm-padding-top-30'/></div>"
+        }]
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "name": "faq",
+        "template": "faq_tmp",
+        "group": [{
+            "title": "About MRS Pathfinder",
+            "items": [{
+                "question": "What is the MRS Pathfinder?",
+                "copy": "<p>Developed together with IBM Marketers, the Marketing Registration Services (MRS) Pathfinder empowers marketers to <strong>learn</strong>, <strong>create</strong> and <strong>test</strong>.</p><p><strong>You will learn best practices</strong> for content gating. You can easily <strong>create registration forms</strong> which generate actionable responses, while improving the overall digital experience for our clients. You will be able to conduct <strong>A/B and MVT testing</strong> on your forms.</p>"
+
+            }, {
+                "question": "Who can use the MRS Pathfinder?",
+                "copy": "<p>The MRS Pathfinder can be used by any Marketing Specialist (and in particular Digital Strategists) who are in charge of creating registration forms for IBM marketing campaigns.</p>"
+
+            }, {
+                "question": "How can I access the MRS Pathfinder?",
+                "copy": "<p>Go to <a href='/'>ibm.biz/mrspathfinder</a>. Before you log in, click on Request Access. You will be directed to OneTeam. Follow the steps to request access (it will require two approvals- from your manager and our team). We will invite you to a short training session to get you all set up. You will receive access once you have completed your training. See full details about the steps <a href='https://w3-connections.ibm.com/blogs/445e741c-9fcc-4849-8934-1f0d79963ffb/entry/MRS_Pathfinder_Community_is_moving_here?lang=en_us' target='_blank'>here.</a></p>"
+
+            }, {
+                "question": "Who developed the MRS Pathfinder?",
+                "copy": "<p>The MRS Pathfinder is being developed by a mixed global agile team, with members from the Marketing Innovation Group (MIG) and  the CIO Office.  The team is working closely with marketers and marketing leaders to make sure the tool we are building is addressing the main challenges marketers are facing today.</p>"
+            }, {
+                "question": "Do I have to use both CCT and the MRS Pathfinder?",
+                "copy": "<p>You can still use CCT. However, MRS Pathfinder represents a new and improved way to market your campaigns.  In order to avoid any disruption in business operations, both applications are currently available. The plan is to sunset CCT in the future. All CCT users will be informed as transition plans progress.</p>"
+            }, {
+                "question": "Is the MRS Pathfinder already available to all business units, in all geographies?",
+                "copy": "<p>MRS Pathfinder is now available to all Marketers in IBM.  To receive our updates make sure you join the <a href='https://w3-connections.ibm.com/blogs/445e741c-9fcc-4849-8934-1f0d79963ffb/entry/MRS_Pathfinder_Community_is_moving_here?lang=en_us' target='_blank'>MRS Community</a>.</p>"
+            }, {
+                "question": "What browsers are supported by MRS Pathfinder?",
+                "copy": "<p>We currently support IE9+  , Safari (mobile), FireFox v.31+ and Chrome v.32+</p>"
+            }, {
+                "question": "Can I redirect an older CCT form to a new Pathfinder form?",
+                "copy": "<p>Yes. Read more about the redirect functionality <a href='https://w3-connections.ibm.com/blogs/445e741c-9fcc-4849-8934-1f0d79963ffb/entry/How_can_I_redirect_an_older_form_to_a_new_MRS_Pathfinder_one?lang=en_us' target='_blank'>here</a>. </p>"
+            },{
+                "question": "Does anyone have access to all the forms in my Business Unit? Can this person help in case the form owner is not available and changes are required?",
+                "copy": "<p>Yes. Each Business Unit has nominated BU Editors who have access to all the forms in their BU. Read more about it and find out who are the BU Editors <a href='https://w3-connections.ibm.com/blogs/445e741c-9fcc-4849-8934-1f0d79963ffb/entry/Business_Unit_Editor_functionality_now_available?lang=en_us' target='_blank'>here</a>.</p>"
+            }]
+        }, {
+            "title": "Training and Updates",
+            "items": [{
+                "question": "How can I register for training on using the MRS Pathfinder?",
+                "copy": "<p>We will invite all users who request access to training. However you can request it in advance by posting a comment on <a href='https://w3-connections.ibm.com/forums/html/threadTopic?id=4bfb11f2-bdb7-42c3-885f-9581922a5f88' target='_blank'>this forum</a>.</p>"
+
+            }, {
+                "question": "How often does the MRS Pathfinder team make updates and improvements to the tool?",
+                "copy": "<p>The MRS Pathfinder team works under Agile methodology. This means every week we are making improvements to the tool, or adding new features.  That’s why your feedback matters- any issue or idea you will have around the tool, will be addressed by the team in the shortest timeframe. If you are interested in becoming a Sponsor User, please email <strong>Silvia Mihailescu</strong>.</p>"
+
+            }, {
+                "question": "How will I be informed about new features becoming available and improvements to the tool?",
+                "copy": "<p>Via the <a href='https://w3-connections.ibm.com/communities/service/html/communitystart?communityUuid=445e741c-9fcc-4849-8934-1f0d79963ffb' target='_blank'>MRS Pathfinder Community</a>, email and through the tool, every time you log in.</p>"
+
+            }]
+        }, {
+            "title": "Content",
+            "items": [{
+                "question": "Can I create forms for both gated and ungated assets?",
+                "copy": "<p>Yes, MRS Pathfinder will advise you when it’s the best to gate or ungate your assets and allow you to build forms for both types.</p>"
+
+            }, {
+                "question": "How do I know when I should NOT gate my assets?",
+                "copy": "<p>The planning section of the MRS Pathfinder tool will give you data-driven recommendations regarding gating best practices depending  on your campaign goals.</p>"
+
+            }, {
+                "question": "What type of assets can I link to?",
+                "copy": "<p>Most types of assets currently available through CCT.</p>"
+
+            }, {
+                "question": "Where can I learn more about gating content?",
+                "copy": "<p>See &quot;Best Practices&quot; section in the tool.</p>"
+
+            }, {
+                "question": "What data will I need to start building my form?",
+                "copy": "<p>Make sure you have your OV Code, Unica Campaign project code, Unica Offer Code (optional for 9.1) and the URL of your asset handy.</p>"
+
+            }, {
+                "question": "Does the MRS Pathfinder automatically validates my UNICA and OV codes?",
+                "copy": "<p>We currently validate OV Code and Unica 7.5 codes. Unica 9.1 codes will be validated shortly. This is an improvement from the current CCT, that does not offer any validation.</p>"
+
+            }, {
+                "question": "How can I modify or delete a form I created?",
+                "copy": "<p>After your have created and saved a form you will be able to edit or delete it quickly from your Home Page.</p>"
+
+            }]
+        }, {
+            "title": "Customization",
+            "items": [{
+                "question": "Can I publish my  marketing copy in my local language?",
+                "copy": "<p>Yes. You can see the available languages in the dropdown.</p>"
+            }, {
+                "question": "Can I change the font size and colors for the headlines and headers?",
+                "copy": "<p>No. They are already aligned with the V18 IBM design standards.</p>"
+            }, {
+                "question": "Can I customize the main body of my form?",
+                "copy": "<p>Yes. Here you can also choose between different font sizes, font types and much more.</p>"
+            }, {
+                "question": "Can I add more fields to the registration form?",
+                "copy": "<p>Yes. You can add more fields like Salutation, Job Title. In the future we will be adding choices for additional optional questions.</p>"
+            }, {
+                "question": "Can I customize the background of my form?",
+                "copy": "<p>Yes. Background images should be no smaller than <strong>1600px by 1200px</strong>. Accepted file formats are jpg or png. Please mind the IBM Guidelines for using images, photography and colors when uploading your background. You can learn more by visiting <a href='http://www.ibm.com/brand' target='_blank'>IBM Brand Central</a> (it includes links to Image Central, information about photography, using copyrighted materials, and more).</p>"
+            }, {
+                "question": "Can I preview how my form will look on a mobile device?",
+                "copy": "<p>Yes.</p>"
+            }, {
+                "question": "Can I share a preview link with my team before actually publishing the form?",
+                "copy": "<p>Yes. You can share a preview link after you have published a draft version of your form.</p>"
+            }, {
+                "question": "Can I conduct A/B testing on my forms?",
+                "copy": "<p>All forms published via MRS Pathfinder are embedded with the <strong>Optimizely</strong> snippet to conduct testing.You will need to have access to the <strong>Optimizely</strong> dashboard in order to set up and conduct your tests. To begin A/B testing via <strong>Optimizely</strong>:<ul class='ibm-plain-list'><li> Request Account: <a href='http://ibm.biz/OptimizelyAccount' target='_blank'>http://ibm.biz/OptimizelyAccount</a></li><li>Optimizely support:<ul><li>Join A/B Testing Community and explore wikis/resources: <a href='http://ibm.biz/ABTesting' target='_blank'>http://ibm.biz/ABTesting</a></li><li>Optimizely Support hosts a live platform demo every Thursday at 2pm EST: <a href='https://www.optimizely.com/resources/live-demo-webinar/' target='_blank'>https://www.optimizely.com/resources/live-demo-webinar/</a></li><li>Here is a link to a new <a href='https://w3-connections.ibm.com/blogs/6c76586c-ea4d-40ce-ade9-542442508ee5/entry/Testing_on_Forms_MRS_Pathfinder_Demo?lang=en_us' target='_blank'>blog post</a> on <strong>A/B Testing</strong>  and MRS Pathfinder (including a <strong>video demo</strong>)</li><li>An insightful <a href='https://w3-connections.ibm.com/communities/service/html/communityview?communityUuid=445e741c-9fcc-4849-8934-1f0d79963ffb#fullpageWidgetId=W19ed9e98dfef_4f9f_9440_7502201faca3&file=009d6977-3e8e-483b-91c9-9b8bb0e29252' target='_blank'>deck</a> on A/B Testing and Pathfinder.</li></ul></li><li>Optimizely Contact <strong>Benjamin R Gorman/New York/IBM</strong>.</li></ul></p>"
+            }, {
+                "question": "Can I get reports on my forms?",
+                "copy": "<p>Yes. You can get reports on your forms via <strong>Coremetrics</strong>,  <strong>Unica</strong>, or by sending an email request to: <a href='mailto:mktsystm@us.ibm.com' target='_blank'>mktsystm@us.ibm.com</a>.  You will need to send your form's URL and the time frame that you want the report for.  And you will receive a custom report from the OPS team.</p>"
+            }]
+        }, {
+            "title": "Feedback",
+            "items": [{
+                "question": "How can I report an issue?",
+                "copy": "<p>If you want to report a bug, please send an email to Pathfinder <a href='mailto:ptfinder@cn.ibm.com' target='_blank'>Support/China/IBM​</a>.</p><p>Include the following information:</p><ol><li>A short description of your problem (what you were trying to do, what happened)</li><li>URL of the form, if available</li><li>A screenshot, so that we can see what the issue is in case we can't immediately replicate it</li><li>What browser you were using (if on a mobile also tell us which device)</li></ol>"
+            }, {
+                "question": "Where can I share my feedback and and ideas for improvement?",
+                "copy": "<p>Use the <a href='https://w3-connections.ibm.com/forums/html/threadTopic?id=89d039fd-6590-41d8-90d5-2b576bf5c3ac' target='_blank'>Feedback</a> section on the section in the  MRS Community.</p>"
+            }, {
+                "question": "How can I connect with other MRS Pathfinder users?",
+                "copy": "<p>Via the <a href='https://w3-connections.ibm.com/communities/service/html/communitystart?communityUuid=445e741c-9fcc-4849-8934-1f0d79963ffb' target='_blank'>MRS Pathfinder Community.</a>.</p>"
+            }]
+        }]
+    },
+    "login_overlay": {
+        "title": "Your session has expired please login:",
+        "template": "loginOver_tmp",
+        "name": "re-login",
+        "uname_placeholder": "IBM email",
+        "pass_placeholder": "Password",
+        "errorTxt": "You've entered an incorrect PW. Please re-enter your PW or if you are a new user, then request access to this tool by clicking on the 'Request Access' link.",
+        "button_txt": "Sign in"
+    },
+    "new_overlay": {
+        "title": "What's New",
+        "template": "newOver_tmp",
+        "name": "new-overlay",
+        "copy": "We’ve added new features to The Pathfinder tool:",
+        "enabled": true,
+        "outage": false,
+        "new_copy": "New",
+        "outage_info": {
+            "title": "Planned Outage",
+            "sub_title": "There will be a planned outage on<br/>May 15, 2016 for 2 hours",
+            "copy": "We are sorry for this inconvenience.<br/>Pathfinder will be back up and running very soon.<br/><br/>Thanks."
+        },
+        "items": [{
+            "title": "Redirect legacy forms to new Pathfinder form",
+            "copy": "Redirect old CCT forms to your new Pathfinder forms without losing any tracking information​",
+            "isNew": true
+        }, {
+            "title": "Add referral/SDA links from Content Central",
+            "copy": "Now you can use HTTP links in your Response Capture Forms. Please note that other HTTP links will not be accepted.",
+            "isNew": true
+        }, {
+            "title": "BU Editor Functionality Now Available",
+            "copy": "In addition to individuals, BU Editors will be able to manage all forms within an entire business group.",
+            "isNew": true
+        }, {
+            "title": "Unica Offer Code",
+            "copy": "For campaigns converting to Unica 9.1, Pathfinder forms will enable you to add your Unica Offer Code when building your form.",
+            "isNew": false
+        }]
+    },
+    "image_overlay": {
+        "template": "imageOver_tmp",
+        "name": "image-overlay",
+        "copy": "Select a background image from library",
+        "button_lbl": "Select Image",
+        "alt_images": [
+            "Background_Image_Blue.jpg",
+            "Background_Image_Gray.jpg",
+            "Background_Image_Green.jpg",
+            "Background_Image_Orange.jpg",
+            "Background_Image_Purple.jpg",
+            "Background_Image_Red.jpg",
+            "Background_Image_Teal.jpg"
+        ]
+    },
+    "delete_overlay": {
+        "template": "deleteOver_tmp",
+        "name": "delete-overlay",
+        "copy": "Are you sure you want to delete",
+        "sub_copy": "By deleting this form you are permanently removing it from the live and preview server",
+        "title": "Delete Form",
+        "btn_lbl": "Yes"
+
+    }
+
+}

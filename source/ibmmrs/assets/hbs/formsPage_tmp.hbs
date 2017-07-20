@@ -1,0 +1,54 @@
+<div class="forms_tmp" id="{{name}}">
+    <div class="ibm-band ibm-padding-top-60">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <h1 class='ibm-h1'>{{title}}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="ibm-band ibm-padding-bottom-60 dataTables_wrapper" id="dataTable_wrapper">
+        <div class="ibm-band">
+            <div class="ibm-columns">
+                <div class="ibm-col-1-1">
+
+                    <div class="dataTable-toolbar">
+
+                        <div id="dataTable_custom" class="dataTable_custom">
+                            <span class="">{{filterlist-title}}</span>
+                            <select id="filterlist" class="js-states form-control" style="width:330px;"></select>
+                        </div>
+                        <div id="dataTable_filter" class="dataTables_filter">
+                            <label>Search:
+                                <input type="search" class="" placeholder="" id="search">
+                            </label>
+                            <span class="ibm-icononly"><a href="#" class="ibm-search-link"></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                    <table class="row-border dataTable" id="dataTable" cellspacing="0" cellpadding="0" border="0">
+                        <thead>
+                            <th style="width:5%"></th>
+                            <th class="sorting_desc" style="width:15%" data-id="timeUpdated">{{tdate}}</th>
+                            <th class="sorting" style="width:10%" data-id="ovCode">{{tdOv}}</th>
+                            <th class="sorting" data-id="nickName" style="width:19%">{{tname}}</th>
+                            <th class="sorting" style="width:18%" data-id="language">{{tlanguage}}</th>
+                            <th class="sorting dt-body-center" style="width:8%" data-id="isUngated">{{ttype}}</th>
+                            <th class="sorting" style="width:15%" data-id="author">{{tAuthor}}</th>
+                            <th class="dt-body-center" style="width:5%"></th>
+                            <th class="dt-body-center" style="width:5%"></th>
+                            <th class="dt-body-center" style="width:5%"></th>
+                        </thead>
+                        <tbody>{{!-- stuff goes here --}}</tbody>
+                    </table>
+                    <div class="paginate ibm-padding-top-30">
+
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="page customize_tmp" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1 ibm-padding-bottom-60">
+                <h2 class="ibm-h2 {{#if isUngated}}ungated{{/if}}">
+    
+                    {{{title}}}
+                </h2>
+
+                {{#if copy}}<p>{{{copy}}}</p>{{/if}}
+            </div>
+        </div>
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                <div class="ibm-column-form">
+                    {{#if isUngated}} 
+                        {{#each fields}}
+                        <div class="ibm-form-elem-grp clearfix">
+                            
+                            {{#if isTextArea}}
+                                <h4 class="ibm-h4">{{title}}</h4>
+                                <p><textarea id="{{id}}" name="{{id}}" class="uField"></textarea></p>
+                            {{else}}
+                                <h4 class="ibm-h4">{{title}}</h4>
+                                <p><input type="text" value="" maxlength="255" size="{{width}}" id="{{id}}" name="{{id}}" placeholder="{{placeholder}}" class="uField"></p>
+                            {{/if}}
+                        </div>
+                        {{/each}} 
+                    {{else}}
+                        <div class="ibm-form-elem-grp">
+                            <h4 class="ibm-h4">{{fields.0.title}}</h4>
+                            <p><input type="text" value="" maxlength="255" size="{{fields.0.width}}" id="{{fields.0.id}}" name="{{fields.0.id}}" placeholder="{{fields.0.placeholder}}" class="uField">
+                            
+                        </div>
+                        <div class="ibm-form-elem-grp">
+                            <h4 class="ibm-h4">{{body_copy}}</h4>
+                            <div class="edit-content">
+                                <textarea id="foo"></textarea>
+                            </div>
+                        </div>
+                        <div class="ibm-form-elem-grp clearfix">
+                            <h4 class="ibm-h4">{{fields.1.title}}</h4>
+                            <p>
+                                <input type="text" value="" maxlength="255" size="{{fields.1.width}}" id="{{fields.1.id}}" name="{{fields.1.id}}" placeholder="{{fields.1.placeholder}}" class="uField">
+                            </p>
+                        </div>
+                        <div class="ibm-form-elem-grp clearfix">
+                            <h4 class="ibm-h4">{{bck_title_copy}}</4>
+                            <p>{{{bck_info_copy}}}</p>
+                            <div class="ibm-form-elem-grp img_preview">
+                        <p>
+                            <img src="" />
+                            <a href="#" class="reset_btn">{{reset_copy}}</a>
+                        </p>
+                    </div>
+                            <div class="ibm-padding-top-30">
+                                <div class="image-btns upload-btns">
+
+                                    <form id="uploadForm">
+                                        
+                                            <input id="upload-file" type="file" class="inputfile" name="uploadedFile" />
+                                            <label for="upload-file" class="iupload image-btn">
+                                                <span class="prev-icon"></span>
+                                                <p>{{{upload_btn}}}</p>
+                                            </label>
+                                        
+                                    </form>
+                         
+                                        <a href="#" class="iselect_btn image-btn">
+                                            <span class="prev-icon"></span>
+                                            <p>{{{select_btn}}}</p>
+                                        </a>
+                                </div>
+             
+                            </div>
+                        </div>
+                    {{/if}}
+                    <div class="preview_btns">
+
+                        <a href="#" class="desktop-preview preview-btn">Preview Desktop</a>
+                         <a href="#" class="mobile-preview preview-btn">Preview Mobile</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="ibm-col-6-3 instructions">
+                <div class="info-inner">
+                    <div class="inner">
+                        <div class="img-clip">
+                            <div class="img-step" style="background: url({{backImage}}) left top no-repeat; height: {{imgHeight}}"></div>
+                        </div>
+                        {{#each items}}
+                            <div class="tips" data-id="{{@index}}">
+                                {{#each this}}
+                                    <div class="ibm-padding-top-30">
+                                        <p class="ibm-bold">{{title}}</p>
+                                        <p>{{{copy}}}</p>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        {{/each}}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="ibm-band bottom-btn-bar">
+            <div class="ibm-columns">
+                <div class="ibm-col-6-3">
+                    <p><a href="#" class="ibm-btn-sec previous">{{{previous_btn_txt}}}</a></p>
+                </div>
+                <div class="ibm-col-6-3">
+                    {{#each buttons}}
+                    <p>
+                        <input type="button" value="{{btn_txt}}" class="ibm-btn-pri save">
+                    </p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,211 @@
+//@extend-elements
+//original selectors
+//#mrs-wrap .ibm-col-2-1 .inner .halfsize, #mrs-wrap .ibm-col-2-1 .inner .fullsize
+%extend_1 {
+    width: 50%;
+    float: left;
+    padding-right: 30px;
+
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+}
+
+//original selectors
+//#mrs-wrap .ibm-col-2-1 .inner .fullsize input, 
+#mrs-wrap .ibm-col-2-1 .inner .halfsize input, 
+#mrs-wrap .ibm-col-2-1 .inner .halfsize div.ibm-selectlist-styled
+%extend_2 {
+    padding-right: 0;
+    width: 100%;
+
+    // border: none;
+}
+
+.preview {
+    #ibm-footer {
+        position: relative;
+    }
+}
+
+#mrs-wrap {
+    background: $color-white;
+    background: $color-white-70;
+    position: relative;
+
+    .ibm-col-2-1 {
+        position: relative;
+        word-wrap: break-word;
+        .inner {
+            padding: 30px;
+
+            img {
+                max-width: 100%;
+            }
+
+            .req-info {
+                font-size: 13px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .halfsize {
+                @extend %extend_1;
+
+                input {
+                    @extend %extend_2;
+                }
+
+                div.ibm-selectlist-styled {
+                    @extend %extend_2;
+                }
+            }
+
+            .fullsize {
+                @extend %extend_1;
+
+                width: 100%;
+
+                input {
+                    @extend %extend_2;
+                }
+            }
+        }
+
+        &.seperator {
+            display: none;
+
+            .inner .sep {
+                width: 100%;
+                height: 1px;
+                background-color: $color-black;
+                margin: 25px 0;
+            }
+        }
+    }
+
+    .lborder {
+        width: 1px;
+        background-color: $color-black;
+        position: absolute;
+        top: 30px;
+        bottom: 30px;
+        left: 49%;
+    }
+}
+
+.preview {
+    .select2-container--default {
+        .select2-selection--single {
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 0 !important;
+        }
+
+        .select2-results__group {
+            line-height: normal;
+        }
+
+        .select2-results > .select2-results__options li:before {
+            content: "";
+        }
+
+        .select2-search--dropdown .select2-search__field {
+            margin-top: 5px;
+        }
+    }
+}
+
+.ibm-form-elem-grp {
+    float: left;
+}
+
+.ibm-row-form {
+    overflow: hidden;
+    position: relative;
+
+    button[type=submit] {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.ibm-notice-choice-container {
+    border: none;
+    margin-bottom: 0;
+    top: inherit;
+    display: table;
+    margin-bottom: 15px;
+
+    label {
+        display: table-cell;
+        padding-left: 10px;
+    }
+
+    div[role=checkbox] {
+        display: table-cell;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #mrs-wrap .ibm-col-2-1 .inner {
+        .halfsize {
+            width: 100%;
+
+            input {
+                padding-right: 0;
+            }
+
+            div.ibm-selectlist-styled {
+                padding-right: 0;
+            }
+        }
+
+        .fullsize input {
+            padding-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #mrs-wrap .ibm-col-2-1 .inner {
+        .f-title {
+            padding-bottom: 15px !important;
+        }
+
+        .req-info {
+            position: relative;
+            right: initial;
+            top: initial;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #mrs-wrap {
+        .ibm-col-2-1 {
+            .inner {
+                padding-bottom: 0;
+            }
+
+            &.seperator {
+                display: block;
+
+                .inner {
+                    padding-top: 25px;
+
+                    .sep {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .lborder {
+            display: none;
+        }
+    }
+}

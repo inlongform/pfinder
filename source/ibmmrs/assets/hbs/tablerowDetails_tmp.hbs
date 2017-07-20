@@ -1,0 +1,11 @@
+<tr>
+        <td colspan="10">
+            <table>
+                <tr>
+                    <td><span class="ibm-bold">{{pageData.last_edit}}</span> {{lastModifiedBy}}</td>
+                    <td><span class="ibm-bold">{{pageData.last_modified}}</span> {{timeUpdated}}</td>
+                    <td>{{#if isPostedToLive}}<span class="ibm-bold">{{pageData.redirect}}</span> {{#if isCCTRedirect}}Yes{{else}}No{{/if}} <a href="#" class="change">{{pageData.editRedirect.btn_txt}}</a>{{/if}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>

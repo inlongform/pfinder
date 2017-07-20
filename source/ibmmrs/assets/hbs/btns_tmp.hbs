@@ -1,0 +1,43 @@
+<div class="page btns_tmp" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-4">
+
+                <div class="gate ibm-padding-bottom-30">
+                    <div class="section_icon" style="{{#if section_yposition}}background-position: 0 {{section_yposition}};{{else}}display: none;{{/if}}"></div>
+                    <h2 class="ibm-h2">{{{copy}}}</h2>
+                    {{#if sub_copy}}<p class="ibm-padding-top-30">{{{sub_copy}}}</p>{{/if}}
+                </div>
+
+
+
+                {{#each buttons}}
+                
+                    <input type="button" value="{{btn_txt}}" class="ibm-btn-pri">
+               
+                {{/each}}
+                
+                {{#if tips}}
+                    <div class="ibm-padding-top-30 tips">
+                    {{#each tips}}
+                        <a href="#" class="tooltip" data-widget="tooltip" data-contentid="e-{{@index}}">{{tooltip_title}}</a>
+                       <div id="e-{{@index}}" class="ibm-tooltip-content">
+                            <h5 class="ibm-h5 ibm-bold">{{tooltip_title}}</h5>
+                            {{{tooltip_txt}}}
+                        </div>
+                       
+                    {{/each}}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <div class="ibm-band bottom-btn-bar">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                <p><a href="#" class="ibm-btn-sec previous">{{{previous_btn_txt}}}</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+

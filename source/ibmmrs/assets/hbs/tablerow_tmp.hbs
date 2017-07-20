@@ -1,0 +1,26 @@
+{{#each forms}}
+
+    <tr>
+        <td>
+            <a href="#" class="plus"></a>
+        </td>
+        <td>{{firstActive}}</td>
+        <td>{{ovCode}}</td>
+        <td>{{nickName}}</td>
+        <td>{{language}}</td>
+        <td class="dt-body-center"><span class="circle">{{isUngated}}</span></td>
+        <td>{{author}}</td>
+        <td class="dt-body-center">
+            <a href="{{url}}" target="_blank" data-widget="tooltip" title="{{#if isPostedToLive}}{{../../pageData/tooltip_live}}{{else}}{{../../pageData/tooltip_preview}}{{/if}}" class="{{#if isPostedToLive}}icon-bolt{{else}}icon-eye{{/if}} tooltip tipso_style"></a>
+        </td>
+        <td class="dt-body-center">
+            
+            <a href="#" data-widget="tooltip" title="{{../pageData/tooltip_edit}}" class="edit icon-pencil tooltip tipso_style {{#unless editable}}disabled{{/unless}}"></a>
+
+        </td>
+        <td class="dt-body-center">
+            <a href="#" data-widget="tooltip" title="{{../pageData/tooltip_delete}}" class="delete icon-trash tooltip tipso_style {{#unless editable}}disabled{{/unless}}"></a>
+        </td>
+    </tr>
+
+{{/each}}

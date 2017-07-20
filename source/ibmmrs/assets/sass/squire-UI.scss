@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+
+}
+
+#makeLink {
+    // display: none;
+}
+
+#insertImage {
+    // display: none;
+}
+
+#blockquote {
+    display: none;
+}
+
+.fa-external-link:before {
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+}
+
+.field-active {
+    border: 1px #8CD211 solid !important;
+}
+iframe {
+    width: 100%;
+    height: 300px;
+    // border: 1px $primary-color solid !important;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    padding: 7px 8px;
+    color: $color_mine_shaft_approx;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: right center;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 3px;
+    outline: none;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: inset 0 1px 2px $black_75;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+}
+
+.menu {
+    text-align: center;
+    //Instead of the line below you could use @include user-select($select)
+    user-select: none;
+    .item {
+        color: $black;
+        float: left;
+        background: $white;
+        padding: 10px;
+        border-left: 1px $color_gallery_approx solid;
+        border-bottom: 3px transparent solid;
+        &:first-child {
+            border-left: none;
+            &:hover {
+                border-bottom: 3px $color_picton_blue_approx solid;
+            }
+        }
+    }
+    .group {
+        //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+        border-radius: 3px;
+        display: inline-block;
+        border: 1px $color_gallery_approx solid;
+        margin: 5px;
+        .item {
+            .flip {
+                //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+                transform: rotateY(180deg);
+            }
+            &:hover {
+                border-bottom: 3px $color_picton_blue_approx solid;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.quit {
+    float: right;
+    top: 0;
+    right: 0;
+    margin-bottom: 5px;
+}

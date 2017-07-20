@@ -1,0 +1,36 @@
+<div class="page home_tmp" data-pageId="{{id}}" id="{{name}}">
+    <div class="ibm-band ibm-padding-bottom-60">
+        <div class="ibm-columns">
+            <div class="ibm-col-6-3">
+                {{{title}}}
+                <h4 class="ibm-h4 ibm-padding-bottom-30">{{material_copy}}</h4>
+                <ul>
+                    {{#each items}}
+                        <li><span>{{title}}</span><a href="#" class="icon-info tooltip" data-widget="tooltip" data-contentid="tt-{{@index}}"></a>
+                            <div id="tt-{{@index}}" class="ibm-tooltip-content">
+                                <h5 class="ibm-h5 ibm-bold">{{title}}</h5>
+                                <p>{{copy}}</p>
+                            </div>
+                        </li>
+
+                    {{/each}}
+
+                </ul>
+                <div class="ibm-padding-top-60">
+
+                    {{#each buttons}}
+                        <input type="button" value="{{btn_txt}}" class="ibm-btn-pri"><a href="#" class="tooltip" data-widget="tooltip" title="{{tooltip_txt}}">{{tooltip_btn_txt}}</a>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="ibm-col-6-3">
+                <iframe id="ritaVid" src="https://player.vimeo.com/video/{{video_id}}?title=0&byline=0&badge=0&portrait=0&color=8cd211" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+            </div>
+        </div>
+        
+    </div>
+
+
+
+</div>

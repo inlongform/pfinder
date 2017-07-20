@@ -1,0 +1,25 @@
+<div class="faq_tmp" id="{{name}}">
+    <div class="ibm-band ibm-padding-bottom-60">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <h1 class="ibm-h1">{{{title}}}</h1>
+            </div>
+        </div>
+        <div class="ibm-columns" id="answers">
+            <div class="ibm-col-1-1">
+            {{#each group}}
+                <h2 class="ibm-h2 ibm-padding-top-60">{{title}}</h2>
+                <div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-background-neutral-white-30">               
+                    {{#each items}}
+                        <h2>{{question}}</h2>
+                        <div class="ibm-container-body ibm-background-neutral-white-30">
+                            {{{copy}}}
+                        </div>
+                    {{/each}}
+                    
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
